@@ -5,9 +5,9 @@
 
 using namespace std;
 
-class LinkGame {
+class GameMediator {
 public:
-    virtual ~LinkGame() = default;
+    virtual ~GameMediator() = default;
 
     virtual string name() const = 0;
 
@@ -23,7 +23,8 @@ public:
 
     virtual bool isGameOver() const = 0;
 
-    virtual int winner() const = 0; //returning the end situation(1=player 1 won, 2=player 2 won, 0=draw)
+    //returning the end situation(1=player 1 won, 2=player 2 won, 0=draw, -1=game isn't over yet)
+    virtual int winner() const = 0;
 
     virtual int score(int player) const = 0;
 };
