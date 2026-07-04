@@ -1,5 +1,5 @@
 #include "usermanager.h"
-//#include "filemanager.h"
+#include "filemanager.h"
 QVector<User> UserManager::users;
 
 

@@ -6,7 +6,7 @@
 #include "security.h"
 #include <QMessageBox>
 #include <QRegularExpression>
-
+#include "custommessagebox.h"
 SignupWindow::SignupWindow(QWidget *parent) : QWidget(parent) , ui(new Ui::SignupWindow) {
     ui->setupUi(this);
 }
@@ -43,28 +43,28 @@ void SignupWindow::on_signupButton_clicked() {
 
     if(password != confirm)
     {
-        QMessageBox::warning(this, "Error", "Passwords do not match.");
+        CustomMessageBox::warning(this, "Error", "Passwords do not match.");
         return;
     }
 
     QRegularExpression emailRegex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
 
     if(!emailRegex.match(email).hasMatch()){
-        QMessageBox::warning(this, "Error", "Invalid email address.");
+        CustomMessageBox::warning(this, "Error", "Invalid email address.");
         return;
     }
 
     QRegularExpression phoneRegex("^09\\d{9}$");
 
     if(!phoneRegex.match(phone).hasMatch()) {
-        QMessageBox::warning(this,"Error","Phone number must be in the format:\n09XXXXXXXXX");
+        CustomMessageBox::warning(this,"Error","Phone number must be in the format:\n09XXXXXXXXX");
         return;
     }
 
     QRegularExpression passwordRegex( "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]).{8,}$");
 
     if(!passwordRegex.match(password).hasMatch()){
-        QMessageBox::warning(this,"Weak Password","Password must contain:\n""• At least 8 characters\n""• One uppercase letter\n"
+        CustomMessageBox::warning(this,"Weak Password","Password must contain:\n""• At least 8 characters\n""• One uppercase letter\n"
         "• One lowercase letter\n""• One number\n""• One special character (@$!%*?&)");
         return;
     }
@@ -77,12 +77,12 @@ void SignupWindow::on_signupButton_clicked() {
     user.passwordHash = Security::hashPassword(password);
 
     if(UserManager::registerUser(user)) {
-        QMessageBox::information(this, "Success", "Registration completed successfully.");
+        CustomMessageBox::information(this, "Success", "Registration completed successfully.");
         LoginWindow *login = new LoginWindow();
         login->show();
         this->close();
     }
     else{
-        QMessageBox::warning(this,"Error", "Username or phone number already exists.");
+        CustomMessageBox::warning(this,"Error", "Username or phone number already exists.");
     }
 }

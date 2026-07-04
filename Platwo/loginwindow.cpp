@@ -6,7 +6,7 @@
 #include "security.h"
 #include "mainmenuwindow.h"
 #include <QMessageBox>
-
+#include "custommessagebox.h"
 LoginWindow::LoginWindow(QWidget *parent): QWidget(parent), ui(new Ui::LoginWindow){
     ui->setupUi(this);
 }
@@ -33,19 +33,19 @@ void LoginWindow::on_loginButton_clicked(){
     QString password = ui->passwordEdit->text();
 
     if(username.isEmpty() || password.isEmpty()){
-        QMessageBox::warning(this, "Error","Please fill all fields.");
+        CustomMessageBox::warning(this, "Error","Please fill all fields.");
         return;
     }
 
     QString hash = Security::hashPassword(password);
 
     if(UserManager::login(username, hash)) {
-        QMessageBox::information(this,"Success","Login successful.");
+        CustomMessageBox::information(this,"Success","Login successful.");
         MainMenuWindow *menu = new MainMenuWindow();
         menu->show();
         this->close();
     }
     else{
-        QMessageBox::warning(this,"Error","Username or password is incorrect.");
+        CustomMessageBox::warning(this,"Error","Username or password is incorrect.");
     }
 }

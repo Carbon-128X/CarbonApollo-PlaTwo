@@ -5,6 +5,7 @@
 #include "security.h"
 #include <QMessageBox>
 #include <QRegularExpression>
+#include "custommessagebox.h"
 ForgotPasswordWindow::ForgotPasswordWindow(QWidget *parent): QWidget(parent), ui(new Ui::ForgotPasswordWindow){
     ui->setupUi(this);
 }
@@ -28,12 +29,12 @@ void ForgotPasswordWindow::on_changePasswordButton_clicked()
     QString confirm = ui->confirmPasswordEdit->text();
 
     if(phone.isEmpty() || password.isEmpty() || confirm.isEmpty()){
-        QMessageBox::warning(this, "Error", "Please fill all fields.");
+        CustomMessageBox::warning(this, "Error", "Please fill all fields.");
         return;
     }
 
     if(password != confirm){
-        QMessageBox::warning(this, "Error", "Passwords do not match.");
+        CustomMessageBox::warning(this, "Error", "Passwords do not match.");
         return;
     }
 
@@ -41,7 +42,7 @@ void ForgotPasswordWindow::on_changePasswordButton_clicked()
     QRegularExpression phoneRegex("^09\\d{9}$");
 
     if(!phoneRegex.match(phone).hasMatch()){
-        QMessageBox::warning(this, "Error", "Invalid phone number.");
+        CustomMessageBox::warning(this, "Error", "Invalid phone number.");
         return;
     }
 
@@ -50,7 +51,7 @@ void ForgotPasswordWindow::on_changePasswordButton_clicked()
         "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]).{8,}$");
 
     if(!passwordRegex.match(password).hasMatch()){
-        QMessageBox::warning(this,"Weak Password","Password must contain:\n""- At least 8 characters\n""- One uppercase letter\n"
+        CustomMessageBox::warning(this,"Weak Password","Password must contain:\n""- At least 8 characters\n""- One uppercase letter\n"
             "- One lowercase letter\n" "- One number\n" "- One special character");
         return;
     }
@@ -58,7 +59,7 @@ void ForgotPasswordWindow::on_changePasswordButton_clicked()
     QString hash = Security::hashPassword(password);
 
     if(UserManager::changePassword(phone, hash)){
-        QMessageBox::information(this, "Success", "Password changed successfully.");
+        CustomMessageBox::information(this, "Success", "Password changed successfully.");
 
         LoginWindow *login = new LoginWindow();
         login->show();
@@ -66,6 +67,6 @@ void ForgotPasswordWindow::on_changePasswordButton_clicked()
         this->close();
     }
     else{
-        QMessageBox::warning(this, "Error", "Phone number not found.");
+        CustomMessageBox::warning(this, "Error", "Phone number not found.");
     }
 }
