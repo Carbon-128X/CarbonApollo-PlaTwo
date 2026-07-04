@@ -1,0 +1,51 @@
+#include "loginwindow.h"
+#include "ui_loginwindow.h"
+#include "welcomewindow.h"
+#include "forgotpasswordwindow.h"
+#include "usermanager.h"
+#include "security.h"
+#include "mainmenuwindow.h"
+#include <QMessageBox>
+
+LoginWindow::LoginWindow(QWidget *parent): QWidget(parent), ui(new Ui::LoginWindow){
+    ui->setupUi(this);
+}
+
+LoginWindow::~LoginWindow(){
+    delete ui;
+}
+
+void LoginWindow::on_backButton_clicked(){
+    WelcomeWindow *welcome = new WelcomeWindow();
+    welcome->show();
+    this->close();
+}
+
+void LoginWindow::on_forgotPasswordButton_clicked() {
+    ForgotPasswordWindow *forgot = new ForgotPasswordWindow();
+    forgot->show();
+    this->close();
+}
+
+
+void LoginWindow::on_loginButton_clicked(){
+    QString username = ui->usernameEdit->text().trimmed();
+    QString password = ui->passwordEdit->text();
+
+    if(username.isEmpty() || password.isEmpty()){
+        QMessageBox::warning(this, "Error","Please fill all fields.");
+        return;
+    }
+
+    QString hash = Security::hashPassword(password);
+
+    if(UserManager::login(username, hash)) {
+        QMessageBox::information(this,"Success","Login successful.");
+        MainMenuWindow *menu = new MainMenuWindow();
+        menu->show();
+        this->close();
+    }
+    else{
+        QMessageBox::warning(this,"Error","Username or password is incorrect.");
+    }
+}
