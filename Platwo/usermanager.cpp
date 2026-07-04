@@ -3,8 +3,13 @@
 QVector<User> UserManager::users;
 
 
+void UserManager::load() {
+    users = FileManager::loadUsers();
+}
 
-
+void UserManager::save() {
+    FileManager::saveUsers(users);
+}
 
 
 bool UserManager::usernameExists(QString username) {
