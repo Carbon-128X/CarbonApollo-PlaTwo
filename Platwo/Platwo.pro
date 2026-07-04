@@ -12,7 +12,7 @@ SOURCES += \
     forgotpasswordwindow.cpp \
     loginwindow.cpp \
     main.cpp \
-    mainmenuwindow.cpp \
+    mainwindow.cpp \
     security.cpp \
     signupwindow.cpp \
     user.cpp \
@@ -25,7 +25,7 @@ HEADERS += \
     filemanager.h \
     forgotpasswordwindow.h \
     loginwindow.h \
-    mainmenuwindow.h \
+    mainwindow.h \
     security.h \
     signupwindow.h \
     user.h \
@@ -36,7 +36,7 @@ HEADERS += \
 FORMS += \
     forgotpasswordwindow.ui \
     loginwindow.ui \
-    mainmenuwindow.ui \
+    mainwindow.ui \
     signupwindow.ui \
     welcomewindow.ui \
     widget.ui
@@ -45,3 +45,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc

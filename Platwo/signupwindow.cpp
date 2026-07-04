@@ -37,7 +37,7 @@ void SignupWindow::on_signupButton_clicked() {
 
 
     if(name.isEmpty() || username.isEmpty() || phone.isEmpty() || email.isEmpty() || password.isEmpty() || confirm.isEmpty()) {
-        QMessageBox::warning(this , "Error", "Please fill all fields.");
+        CustomMessageBox::warning(this , "Error", "Please fill all fields.");
         return;
     }
 

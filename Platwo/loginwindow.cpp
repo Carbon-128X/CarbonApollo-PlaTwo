@@ -4,7 +4,7 @@
 #include "forgotpasswordwindow.h"
 #include "usermanager.h"
 #include "security.h"
-#include "mainmenuwindow.h"
+#include "mainwindow.h"
 #include <QMessageBox>
 #include "custommessagebox.h"
 LoginWindow::LoginWindow(QWidget *parent): QWidget(parent), ui(new Ui::LoginWindow){
@@ -41,9 +41,12 @@ void LoginWindow::on_loginButton_clicked(){
 
     if(UserManager::login(username, hash)) {
         CustomMessageBox::information(this,"Success","Login successful.");
-        MainMenuWindow *menu = new MainMenuWindow();
-        menu->show();
+        MainWindow *mainMenu = new MainWindow();
+
+        mainMenu->show();
+
         this->close();
+
     }
     else{
         CustomMessageBox::warning(this,"Error","Username or password is incorrect.");
