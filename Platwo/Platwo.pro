@@ -8,6 +8,7 @@ CONFIG += c++17
 
 SOURCES += \
     custommessagebox.cpp \
+    editprofilewindow.cpp \
     filemanager.cpp \
     forgotpasswordwindow.cpp \
     loginwindow.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 
 HEADERS += \
     custommessagebox.h \
+    editprofilewindow.h \
     filemanager.h \
     forgotpasswordwindow.h \
     loginwindow.h \
@@ -34,6 +36,7 @@ HEADERS += \
     widget.h
 
 FORMS += \
+    editprofilewindow.ui \
     forgotpasswordwindow.ui \
     loginwindow.ui \
     mainwindow.ui \

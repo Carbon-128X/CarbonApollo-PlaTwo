@@ -3,6 +3,8 @@
 #include "custommessagebox.h"
 #include <QPixmap>
 #include <QMessageBox>
+#include "editprofilewindow.h"
+#include <QApplication>
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) , ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -84,4 +86,18 @@ void MainWindow::on_startGameButton_clicked(){
         CustomMessageBox::warning(this, "Game", "Please select a game first.");
      break;
     }
+}
+
+void MainWindow::on_profileButton_clicked()
+{
+    editprofilewindow *edit = new editprofilewindow();
+
+    edit->show();
+
+    close();
+}
+
+void MainWindow::on_exitButton_clicked()
+{
+    QApplication::quit();
 }

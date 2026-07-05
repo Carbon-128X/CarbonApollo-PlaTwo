@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>editprofilewindow</class>
+ <widget class="QWidget" name="editprofilewindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Edit form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#121212;</string>
+  </property>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>560</y>
+     <width>241</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background:#2F80ED;
+    color:white;
+    border-radius:12px;
+    font:16pt &quot;Segoe UI&quot;;
+    min-height:50px;
+}
+
+QPushButton:hover{
+    background:#56CCF2;
+}
+
+QPushButton:pressed{
+    background:#1C5DB6;
+}</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="editprofileTitleLabel">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>1141</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>40</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:#56CCF2;</string>
+   </property>
+   <property name="text">
+    <string>Edit Profile</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="descriptionLabel">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>130</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;</string>
+   </property>
+   <property name="text">
+    <string>Enter your new information:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>160</y>
+     <width>361</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="nameEdit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>New Name</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="usernameEdit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>New Username</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="phoneEdit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>New Phone number</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="emailEdit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>New Email</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="passwordEdit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::EchoMode::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>New Password</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="confirmPasswordEdit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::EchoMode::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Confrim Passford</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="saveButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+
+background:#2C3E50;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+min-height:50px;
+
+font-size:14pt;
+
+font-weight:bold;
+
+}
+
+QPushButton:hover{
+
+background:#3A86FF;
+
+}
+
+QPushButton:pressed{
+
+background:#2563EB;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Save Changes</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

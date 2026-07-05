@@ -72,9 +72,9 @@ background:transparent;</string>
   <widget class="QPushButton" name="loginButton">
    <property name="geometry">
     <rect>
-     <x>441</x>
-     <y>399</y>
-     <width>321</width>
+     <x>430</x>
+     <y>390</y>
+     <width>341</width>
      <height>61</height>
     </rect>
    </property>
@@ -124,9 +124,9 @@ background:#1E5FBF;
   <widget class="QPushButton" name="signupButton">
    <property name="geometry">
     <rect>
-     <x>441</x>
-     <y>472</y>
-     <width>321</width>
+     <x>430</x>
+     <y>460</y>
+     <width>341</width>
      <height>61</height>
     </rect>
    </property>

@@ -2,8 +2,8 @@
 #define USER_H
 #include <QString>
 #include <QJsonObject>
-class User
-{
+
+class User {
 public:
     QString name;
     QString username;

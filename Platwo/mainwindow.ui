@@ -80,7 +80,7 @@
          <x>150</x>
          <y>560</y>
          <width>351</width>
-         <height>50</height>
+         <height>61</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -118,7 +118,7 @@ background:#2563EB;
         <string>Start Game</string>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>90</x>
@@ -210,7 +210,7 @@ border-radius:18px;
     </property>
     <property name="font">
      <font>
-      <pointsize>30</pointsize>
+      <pointsize>35</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -224,12 +224,12 @@ border-radius:18px;
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>80</x>
       <y>160</y>
-      <width>311</width>
+      <width>331</width>
       <height>471</height>
      </rect>
     </property>

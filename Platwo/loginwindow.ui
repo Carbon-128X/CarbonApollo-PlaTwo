@@ -26,7 +26,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>70</y>
+     <y>50</y>
      <width>1161</width>
      <height>111</height>
     </rect>
@@ -50,10 +50,10 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>190</y>
-     <width>361</width>
-     <height>261</height>
+     <x>410</x>
+     <y>170</y>
+     <width>381</width>
+     <height>281</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -179,9 +179,9 @@ font:15pt &quot;Segoe UI&quot;;
   <widget class="QPushButton" name="loginButton">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>410</x>
      <y>460</y>
-     <width>361</width>
+     <width>381</width>
      <height>60</height>
     </rect>
    </property>
@@ -194,27 +194,39 @@ font:15pt &quot;Segoe UI&quot;;
    <property name="font">
     <font>
      <family>Segoe UI</family>
-     <pointsize>16</pointsize>
+     <pointsize>14</pointsize>
      <italic>false</italic>
-     <bold>false</bold>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
 
-background:#2F80ED;
+background:#2C3E50;
 
 color:white;
 
+border:none;
+
 border-radius:12px;
 
-font:16pt &quot;Segoe UI&quot;;
+min-height:50px;
+
+font-size:14pt;
+
+font-weight:bold;
 
 }
 
 QPushButton:hover{
 
-background:#56CCF2;
+background:#3A86FF;
+
+}
+
+QPushButton:pressed{
+
+background:#2563EB;
 
 }</string>
    </property>
@@ -231,9 +243,9 @@ background:#56CCF2;
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>480</x>
      <y>590</y>
-     <width>251</width>
+     <width>241</width>
      <height>51</height>
     </rect>
    </property>
@@ -271,9 +283,9 @@ background:#56CCF2;
   <widget class="QPushButton" name="forgotPasswordButton">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>480</x>
      <y>530</y>
-     <width>251</width>
+     <width>241</width>
      <height>51</height>
     </rect>
    </property>

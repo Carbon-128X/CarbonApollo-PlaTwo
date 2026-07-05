@@ -45,9 +45,9 @@
    <property name="geometry">
     <rect>
      <x>400</x>
-     <y>130</y>
+     <y>120</y>
      <width>401</width>
-     <height>381</height>
+     <height>401</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -340,19 +340,33 @@ QLineEdit:focus{
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton{
-    background:#2F80ED;
-    color:white;
-    border-radius:12px;
-    font:16pt &quot;Segoe UI&quot;;
-    min-height:50px;
+
+background:#2C3E50;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+min-height:50px;
+
+font-size:14pt;
+
+font-weight:bold;
+
 }
 
 QPushButton:hover{
-    background:#56CCF2;
+
+background:#3A86FF;
+
 }
 
 QPushButton:pressed{
-    background:#1C5DB6;
+
+background:#2563EB;
+
 }</string>
       </property>
       <property name="text">
@@ -366,15 +380,15 @@ QPushButton:pressed{
    <property name="geometry">
     <rect>
      <x>500</x>
-     <y>620</y>
+     <y>621</y>
      <width>211</width>
-     <height>41</height>
+     <height>50</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
-     <height>0</height>
+     <height>50</height>
     </size>
    </property>
    <property name="maximumSize">
@@ -408,9 +422,9 @@ QPushButton:pressed{
    <property name="geometry">
     <rect>
      <x>462</x>
-     <y>522</y>
+     <y>532</y>
      <width>281</width>
-     <height>27</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
@@ -432,10 +446,10 @@ QPushButton:pressed{
   <widget class="QPushButton" name="loginButton">
    <property name="geometry">
     <rect>
-     <x>462</x>
-     <y>556</y>
+     <x>460</x>
+     <y>560</y>
      <width>291</width>
-     <height>50</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -446,19 +460,33 @@ QPushButton:pressed{
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-    background:#2F80ED;
-    color:white;
-    border-radius:12px;
-    font:16pt &quot;Segoe UI&quot;;
-    min-height:50px;
+
+background:#2C3E50;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+min-height:50px;
+
+font-size:14pt;
+
+font-weight:bold;
+
 }
 
 QPushButton:hover{
-    background:#56CCF2;
+
+background:#3A86FF;
+
 }
 
 QPushButton:pressed{
-    background:#1C5DB6;
+
+background:#2563EB;
+
 }</string>
    </property>
    <property name="text">
