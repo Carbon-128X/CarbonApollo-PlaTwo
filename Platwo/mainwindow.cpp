@@ -5,20 +5,21 @@
 #include <QMessageBox>
 #include "editprofilewindow.h"
 #include <QApplication>
+#include "usermanager.h"
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) , ui(new Ui::MainWindow) {
     ui->setupUi(this);
     selectedGame = None;
-    ui->gameTitle->setText("Welcome to PLATWO");
+    ui->gameTitle->setText( "Welcome, " + UserManager::currentUser.name + "!");
     ui->gameDescription->setText( "Choose one of the games from the menu.");
-    ui->gameImage->clear();
+    QPixmap logo(":/images/images/capollo.jpg");
+    ui->gameImage->setPixmap( logo.scaled( ui->gameImage->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->gameImage->setAlignment(Qt::AlignCenter);
     ui->startGameButton->setEnabled(false);
 }
 MainWindow::~MainWindow() {
     delete ui;
 }
-
-
 
 void MainWindow::showBoxes(){
     selectedGame = Boxes;
@@ -90,7 +91,7 @@ void MainWindow::on_startGameButton_clicked(){
 
 void MainWindow::on_profileButton_clicked()
 {
-    editprofilewindow *edit = new editprofilewindow();
+    EditProfileWindow *edit = new EditProfileWindow();
 
     edit->show();
 

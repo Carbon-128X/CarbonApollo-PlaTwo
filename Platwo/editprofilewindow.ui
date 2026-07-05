@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>editprofilewindow</class>
- <widget class="QWidget" name="editprofilewindow">
+ <class>EditProfileWindow</class>
+ <widget class="QWidget" name="EditProfileWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>480</x>
-     <y>560</y>
+     <y>571</y>
      <width>241</width>
      <height>50</height>
     </rect>
@@ -74,10 +74,10 @@ QPushButton:pressed{
   <widget class="QLabel" name="descriptionLabel">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>130</y>
+     <x>431</x>
+     <y>131</y>
      <width>341</width>
-     <height>31</height>
+     <height>27</height>
     </rect>
    </property>
    <property name="font">
@@ -96,12 +96,12 @@ QPushButton:pressed{
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>160</y>
-     <width>361</width>
+     <x>431</x>
+     <y>164</y>
+     <width>341</width>
      <height>401</height>
     </rect>
    </property>
@@ -163,6 +163,9 @@ QLineEdit:focus{
 QLineEdit:focus{
     border:2px solid #56CCF2;
 }</string>
+      </property>
+      <property name="maxLength">
+       <number>11</number>
       </property>
       <property name="placeholderText">
        <string>New Phone number</string>
@@ -243,6 +246,12 @@ QLineEdit:focus{
       <property name="minimumSize">
        <size>
         <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
         <height>60</height>
        </size>
       </property>

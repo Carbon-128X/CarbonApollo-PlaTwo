@@ -1,22 +1,27 @@
 #ifndef EDITPROFILEWINDOW_H
 #define EDITPROFILEWINDOW_H
-
 #include <QWidget>
 
 namespace Ui {
-class editprofilewindow;
+class EditProfileWindow;
 }
 
-class editprofilewindow : public QWidget
-{
+class EditProfileWindow : public QWidget {
     Q_OBJECT
 
 public:
-    explicit editprofilewindow(QWidget *parent = nullptr);
-    ~editprofilewindow();
+    explicit EditProfileWindow(QWidget *parent = nullptr);
+    ~EditProfileWindow();
+
+private slots:
+    void on_saveButton_clicked();
+    void on_backButton_clicked();
 
 private:
-    Ui::editprofilewindow *ui;
+   Ui::EditProfileWindow *ui;
+   void loadUserData();
+   bool validateInput();
+
 };
 
 #endif // EDITPROFILEWINDOW_H
