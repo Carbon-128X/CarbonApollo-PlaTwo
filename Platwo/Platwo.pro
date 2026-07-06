@@ -11,6 +11,7 @@ SOURCES += \
     editprofilewindow.cpp \
     filemanager.cpp \
     forgotpasswordwindow.cpp \
+    gamewindow.cpp \
     loginwindow.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -26,6 +27,7 @@ HEADERS += \
     editprofilewindow.h \
     filemanager.h \
     forgotpasswordwindow.h \
+    gamewindow.h \
     loginwindow.h \
     mainwindow.h \
     security.h \
@@ -38,6 +40,7 @@ HEADERS += \
 FORMS += \
     editprofilewindow.ui \
     forgotpasswordwindow.ui \
+    gamewindow.ui \
     loginwindow.ui \
     mainwindow.ui \
     signupwindow.ui \
