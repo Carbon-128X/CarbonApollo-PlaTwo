@@ -13,6 +13,7 @@ SOURCES += \
     forgotpasswordwindow.cpp \
     gamehistory.cpp \
     gamewindow.cpp \
+    guestwindow.cpp \
     hostwindow.cpp \
     loginwindow.cpp \
     main.cpp \
@@ -31,6 +32,7 @@ HEADERS += \
     forgotpasswordwindow.h \
     gamehistory.h \
     gamewindow.h \
+    guestwindow.h \
     hostwindow.h \
     loginwindow.h \
     mainwindow.h \
@@ -45,6 +47,7 @@ FORMS += \
     editprofilewindow.ui \
     forgotpasswordwindow.ui \
     gamewindow.ui \
+    guestwindow.ui \
     hostwindow.ui \
     loginwindow.ui \
     mainwindow.ui \

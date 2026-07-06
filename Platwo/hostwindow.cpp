@@ -1,14 +1,72 @@
 #include "hostwindow.h"
 #include "ui_hostwindow.h"
+#include "gamewindow.h"
+#include <QIntValidator>
 
-HostWindow::HostWindow(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::HostWindow)
-{
+HostWindow::HostWindow(GameWindow::GameType game, QWidget *parent): QWidget(parent),ui(new Ui::HostWindow),currentGame(game){
     ui->setupUi(this);
+    initializeWindow();
 }
 
-HostWindow::~HostWindow()
-{
+HostWindow::~HostWindow() {
     delete ui;
+}
+
+void HostWindow::initializeWindow() {
+    ui->statusLabel->hide();
+    ui->timeEdit->setEnabled(false);
+    ui->timeEdit->setText("120");
+    ui->portEdit->setPlaceholderText("e.g. 5000");
+    ui->portEdit->setValidator(new QIntValidator(1024,65535,this));
+    ui->timeEdit->setValidator( new QIntValidator(1,99999,this));
+    if(currentGame != GameWindow::Boxes) {
+        ui->boardSizeLabel->hide();
+        ui->boardSizeCombo->hide();
+    }
+    ui->ipValueLabel->setText("--------");
+}
+
+bool HostWindow::validateInput() {
+    if(ui->portEdit->text().trimmed().isEmpty()) {
+        ui->statusLabel->show();
+        ui->statusLabel->setText("Enter a valid port.");
+        return false;
+    }
+
+    if(ui->timeLimitCheck->isChecked()) {
+        if(ui->timeEdit->text().trimmed().isEmpty()) {
+            ui->statusLabel->show();
+            ui->statusLabel->setText("Enter game time.");
+            return false;
+        }
+    }
+
+ return true;
+}
+
+QString HostWindow::getLocalIP() {
+    // فعلاً برای تست
+    // بعداً با QNetworkInterface جایگزین می‌شود.
+    return "127.0.0.1";
+}
+
+void HostWindow::on_timeLimitCheck_clicked(bool checked) {
+    ui->timeEdit->setEnabled(checked);
+}
+
+void HostWindow::on_createRoomButton_clicked() {
+    if(!validateInput()){
+        return;
+    }
+    ui->statusLabel->show();
+    ui->statusLabel->setText("Creating room...");
+    QString ip = getLocalIP();
+    ui->ipValueLabel->setText(ip);
+    ui->statusLabel->setText("Waiting for guest...");
+}
+
+void HostWindow::on_backButton_clicked() {
+    GameWindow *game = new GameWindow(currentGame);
+    game->show();
+    close();
 }

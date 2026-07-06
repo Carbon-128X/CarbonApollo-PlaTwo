@@ -1,12 +1,15 @@
 #include "gamewindow.h"
 #include "ui_gamewindow.h"
 #include "mainwindow.h"
+#include "hostwindow.h"
+#include "guestwindow.h"
 #include "usermanager.h"
 #include "gamehistory.h"
 #include <QPixmap>
 #include <QHeaderView>
 #include <QTableWidgetItem>
-
+#include <QMessageBox>
+#include "custommessagebox.h"
 GameWindow::GameWindow(GameType game, QWidget *parent): QWidget(parent), ui(new Ui::GameWindow), currentGame(game) {
     ui->setupUi(this);
     ui->historyTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -82,5 +85,17 @@ void GameWindow::on_backButton_clicked(){
 
 void GameWindow::on_startGameButton_clicked()
 {
-    //این مال هاست و گست هست ساختم قرار میدم
+    if(ui->hostRadioButton->isChecked()) {
+        HostWindow *host = new HostWindow(currentGame);
+        host->show();
+        close();
+    }
+    else if(ui->guestRadioButton->isChecked()) {
+        GuestWindow *guest = new GuestWindow(currentGame);
+        guest->show();
+        close();
+    }
+    else {
+        CustomMessageBox::warning( this,"Role","Please choose Host or Guest first." );
+    }
 }
