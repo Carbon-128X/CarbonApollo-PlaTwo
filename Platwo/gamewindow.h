@@ -19,10 +19,12 @@ public:
 
 private slots:
     void on_backButton_clicked();
+    void on_startGameButton_clicked();
 private:
     Ui::GameWindow *ui;
     GameType currentGame;
     void loadGameInformation();
+    void loadHistory();
 };
 
 #endif // GAMEWINDOW_H

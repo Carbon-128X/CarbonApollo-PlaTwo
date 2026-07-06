@@ -1,12 +1,24 @@
 #include "gamewindow.h"
 #include "ui_gamewindow.h"
 #include "mainwindow.h"
-#include "mainwindow.h"
+#include "usermanager.h"
+#include "gamehistory.h"
 #include <QPixmap>
+#include <QHeaderView>
+#include <QTableWidgetItem>
 
 GameWindow::GameWindow(GameType game, QWidget *parent): QWidget(parent), ui(new Ui::GameWindow), currentGame(game) {
     ui->setupUi(this);
+    ui->historyTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->historyTable->horizontalHeader()->setStretchLastSection(true);
+    ui->historyTable->verticalHeader()->setVisible(false);
+    ui->historyTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->historyTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->historyTable->setFocusPolicy(Qt::NoFocus);
+    ui->historyTable->setShowGrid(false);
+
     loadGameInformation();
+    loadHistory();
 }
 
 GameWindow::~GameWindow() {
@@ -30,8 +42,45 @@ void GameWindow::loadGameInformation() {
     }
 }
 
+void GameWindow::loadHistory() {
+    QString gameName;
+    switch(currentGame) {
+    case Boxes:
+        gameName = "Boxes";
+        break;
+
+    case Morris:
+        gameName = "Morris";
+        break;
+
+    case Fanorona:
+        gameName = "Fanorona";
+        break;
+    }
+
+    QVector<GameHistory> history = UserManager::getHistory( UserManager::currentUser.username, gameName);
+    if(history.isEmpty()){
+        ui->historyTable->setRowCount(1);
+        ui->historyTable->setItem( 0, 0, new QTableWidgetItem("No games played yet."));
+        return;
+    }
+    ui->historyTable->setRowCount(history.size());
+    for(int i = 0; i < history.size(); i++) {
+        ui->historyTable->setItem(i,0,new QTableWidgetItem(history[i].opponent));
+        ui->historyTable->setItem(i,1,new QTableWidgetItem(history[i].date));
+        ui->historyTable->setItem(i,2,new QTableWidgetItem(history[i].role));
+        ui->historyTable->setItem(i,3,new QTableWidgetItem(history[i].winner));
+        ui->historyTable->setItem(i,4,new QTableWidgetItem(history[i].score));
+    }
+}
+
 void GameWindow::on_backButton_clicked(){
     MainWindow *menu = new MainWindow();
     menu->show();
     close();
+}
+
+void GameWindow::on_startGameButton_clicked()
+{
+    //این مال هاست و گست هست ساختم قرار میدم
 }

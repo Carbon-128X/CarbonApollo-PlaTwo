@@ -40,3 +40,36 @@ QVector<User> FileManager::loadUsers(){
 
     return users;
 }
+
+void FileManager::saveHistory(const QVector<GameHistory> &history) {
+    QJsonArray array;
+    for(const GameHistory &item : history){
+        array.append(item.toJson());
+    }
+    QFile file("history.json");
+
+    if(file.open(QIODevice::WriteOnly)) {
+        file.write(QJsonDocument(array).toJson());
+        file.close();
+    }
+}
+
+QVector<GameHistory> FileManager::loadHistory() {
+    QVector<GameHistory> history;
+        QFile file("history.json");
+
+    if(!file.exists()){
+        return history;
+    }
+    if(file.open(QIODevice::ReadOnly)) {
+        QByteArray data=file.readAll();
+        file.close();
+        QJsonArray array=QJsonDocument::fromJson(data).array();
+
+        for(auto value:array){
+            history.push_back(GameHistory::fromJson(value.toObject()));
+        }
+    }
+
+    return history;
+}

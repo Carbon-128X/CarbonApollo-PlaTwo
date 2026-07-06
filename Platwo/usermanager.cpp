@@ -2,13 +2,15 @@
 #include "filemanager.h"
 QVector<User> UserManager::users;
 User UserManager::currentUser;
-
+QVector<GameHistory> UserManager::history;
 void UserManager::load() {
     users = FileManager::loadUsers();
+    history=FileManager::loadHistory();
 }
 
 void UserManager::save() {
     FileManager::saveUsers(users);
+    FileManager::saveHistory(history);
 }
 
 bool UserManager::usernameExists(QString username) {
@@ -135,4 +137,20 @@ bool UserManager::updateUser(const User &newUser) {
     }
 
  return false;
+}
+
+void UserManager::addHistory(const GameHistory &game) {
+    history.push_back(game);
+    FileManager::saveHistory(history);
+}
+
+QVector<GameHistory> UserManager::getHistory(QString username, QString game) {
+    QVector<GameHistory> result;
+    for(const GameHistory &item : history) {
+        if(item.username==username && item.game==game) {
+            result.push_back(item);
+        }
+    }
+
+ return result;
 }

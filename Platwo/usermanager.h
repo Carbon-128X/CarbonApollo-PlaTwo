@@ -2,7 +2,7 @@
 #define USERMANAGER_H
 #include <QVector>
 #include "user.h"
-
+#include "gamehistory.h"
 class UserManager {
 public:
 
@@ -21,6 +21,9 @@ public:
     static bool changePassword(QString phone, QString newPasswordHash);
     static User* findUser(QString username);
     static bool updateUser(const User &user);
+    static QVector<GameHistory> history;
+    static void addHistory(const GameHistory &game);
+    static QVector<GameHistory> getHistory(QString username, QString game);
 };
 
 #endif
