@@ -1,0 +1,53 @@
+# --- Build output ---
+build/
+build-*/
+*.o
+*.obj
+*.exe
+*.out
+
+# --- Qt / qmake / CMake generated files ---
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+Makefile
+Makefile.*
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+.qmake.stash
+
+# --- Visual Studio ---
+.vs/
+Debug/
+Release/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+*.vcxproj.user
+*.suo
+*.user
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.ipch
+*.pdb
+*.ilk
+*.aps
+*.opensdf
+*.sdf
+ipch/
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+*.autosave
+
+# --- OS junk ---
+Thumbs.db
+.DS_Store

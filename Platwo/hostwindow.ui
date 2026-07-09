@@ -376,7 +376,7 @@ background:transparent;</string>
     </property>
    </widget>
   </widget>
-  <widget class="QPushButton" name="createRoomButton_2">
+  <widget class="QPushButton" name="createRoomButton">
    <property name="geometry">
     <rect>
      <x>420</x>

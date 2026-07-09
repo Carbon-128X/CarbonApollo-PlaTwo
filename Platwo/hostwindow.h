@@ -13,11 +13,15 @@ class HostWindow : public QWidget {
 public:
     explicit HostWindow(GameWindow::GameType game, QWidget *parent = nullptr);
     ~HostWindow();
+    int getBoardSize() const;
+    int getGameTime() const;
+    bool hasTimer() const;
 
 private slots:
     void on_timeLimitCheck_clicked(bool checked);
     void on_createRoomButton_clicked();
     void on_backButton_clicked();
+
 
 private:
     Ui::HostWindow *ui;
@@ -25,6 +29,10 @@ private:
     void initializeWindow();
     bool validateInput();
     QString getLocalIP();
+
+    int boardSize = 6;
+    int gameTime = 0;
+    bool timerEnabled = false;
 };
 
 #endif // HOSTWINDOW_H

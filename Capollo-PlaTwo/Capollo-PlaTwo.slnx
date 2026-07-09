@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Capollo-PlaTwo/Capollo-PlaTwo.vcxproj" Id="40fa6557-4ec9-46bc-84f7-2d5bcd4742f0" />
+</Solution>

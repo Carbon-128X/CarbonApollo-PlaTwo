@@ -7,6 +7,8 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    boardwidget.cpp \
+    boxesboardwindow.cpp \
     custommessagebox.cpp \
     editprofilewindow.cpp \
     filemanager.cpp \
@@ -15,6 +17,7 @@ SOURCES += \
     gamewindow.cpp \
     guestwindow.cpp \
     hostwindow.cpp \
+    logic/dotsAndBoxes.cpp \
     loginwindow.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -23,9 +26,12 @@ SOURCES += \
     user.cpp \
     usermanager.cpp \
     welcomewindow.cpp \
-    widget.cpp
+    widget.cpp \
+
 
 HEADERS += \
+    boardwidget.h \
+    boxesboardwindow.h \
     custommessagebox.h \
     editprofilewindow.h \
     filemanager.h \
@@ -34,6 +40,9 @@ HEADERS += \
     gamewindow.h \
     guestwindow.h \
     hostwindow.h \
+    logic/dotsAndBoxes.h \
+    logic/gameMediator.h \
+    logic/move.h \
     loginwindow.h \
     mainwindow.h \
     security.h \
@@ -41,9 +50,10 @@ HEADERS += \
     user.h \
     usermanager.h \
     welcomewindow.h \
-    widget.h
+    widget.h \
 
 FORMS += \
+    boxesboardwindow.ui \
     editprofilewindow.ui \
     forgotpasswordwindow.ui \
     gamewindow.ui \

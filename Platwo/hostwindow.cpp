@@ -2,6 +2,7 @@
 #include "ui_hostwindow.h"
 #include "gamewindow.h"
 #include <QIntValidator>
+#include "boxesboardwindow.h"
 
 HostWindow::HostWindow(GameWindow::GameType game, QWidget *parent): QWidget(parent),ui(new Ui::HostWindow),currentGame(game){
     ui->setupUi(this);
@@ -45,7 +46,6 @@ bool HostWindow::validateInput() {
 }
 
 QString HostWindow::getLocalIP() {
-    // فعلاً برای تست
     // بعداً با QNetworkInterface جایگزین می‌شود.
     return "127.0.0.1";
 }
@@ -58,15 +58,41 @@ void HostWindow::on_createRoomButton_clicked() {
     if(!validateInput()){
         return;
     }
-    ui->statusLabel->show();
-    ui->statusLabel->setText("Creating room...");
-    QString ip = getLocalIP();
-    ui->ipValueLabel->setText(ip);
-    ui->statusLabel->setText("Waiting for guest...");
+    //اندازه زمین گیم
+    int boardSize = 6;
+
+    if(currentGame == GameWindow::Boxes){
+        boardSize = ui->boardSizeCombo->currentText().split(" ").first().toInt();
+    }
+
+    // تایمر
+    bool timerEnabled = ui->timeLimitCheck->isChecked();
+    int gameTime = 120;
+
+    if(timerEnabled){
+        gameTime = ui->timeEdit->text().toInt();
+    }
+    //-----------------------------------
+    BoxesBoardWindow *board = new BoxesBoardWindow( boardSize, timerEnabled, gameTime);
+    board->show();
+    this->close();
+
 }
 
 void HostWindow::on_backButton_clicked() {
     GameWindow *game = new GameWindow(currentGame);
     game->show();
     close();
+}
+
+int HostWindow::getBoardSize() const {
+    return boardSize;
+}
+
+int HostWindow::getGameTime() const {
+    return gameTime;
+}
+
+bool HostWindow::hasTimer() const {
+    return timerEnabled;
 }
