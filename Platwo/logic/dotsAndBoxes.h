@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include "gameMediator.h"
-
+#include <map>
 using namespace std;
 
 class DotsAndBoxes : public GameMediator {
@@ -16,7 +16,7 @@ private:
 
     //a set of pair for eaach line that has drawn(small dot, big dot).
     set<pair<int, int>> lines_;
-
+    map<pair<int,int>, int> lineOwner_;
     // (rows-1) * (cols-1) boxes, numbered like the dots.
     vector<int> boxOwner_;
 
@@ -54,4 +54,9 @@ public:
         int score1, int score2,
         const vector<Move>& lines,
         const vector<int>& boxOwners);
+
+
+    int lineOwner(int from,int to) const;
+    map<pair<int,int>,int> lineOwners() const;
+    void forceNextPlayer();
 };

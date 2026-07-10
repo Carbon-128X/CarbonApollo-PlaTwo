@@ -10,6 +10,12 @@
     <height>700</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -27,12 +33,14 @@
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>50</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#56CCF2;</string>
+    <string notr="true">color:#56CCF2;
+background:transparent;</string>
    </property>
    <property name="text">
     <string>SIGN UP</string>
@@ -40,341 +48,6 @@
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>120</y>
-     <width>381</width>
-     <height>401</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLabel" name="nameLabel">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:white;</string>
-        </property>
-        <property name="text">
-         <string>Name:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="nameEdit">
-        <property name="styleSheet">
-         <string notr="true">QLineEdit{
-    background:#2B2B2B;
-    border:2px solid #2F80ED;
-    border-radius:10px;
-    padding-left:10px;
-    color:white;
-    font:15pt &quot;Segoe UI&quot;;
-}
-
-QLineEdit:focus{
-    border:2px solid #56CCF2;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="placeholderText">
-         <string>Enter your full name</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="usernameLabel">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:white;</string>
-        </property>
-        <property name="text">
-         <string>Username:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="usernameEdit">
-        <property name="styleSheet">
-         <string notr="true">QLineEdit{
-    background:#2B2B2B;
-    border:2px solid #2F80ED;
-    border-radius:10px;
-    padding-left:10px;
-    color:white;
-    font:15pt &quot;Segoe UI&quot;;
-}
-
-QLineEdit:focus{
-    border:2px solid #56CCF2;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="placeholderText">
-         <string>Choose a username</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <item>
-       <widget class="QLabel" name="emailLabel">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:white;</string>
-        </property>
-        <property name="text">
-         <string>Email:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="emailEdit">
-        <property name="styleSheet">
-         <string notr="true">QLineEdit{
-    background:#2B2B2B;
-    border:2px solid #2F80ED;
-    border-radius:10px;
-    padding-left:10px;
-    color:white;
-    font:15pt &quot;Segoe UI&quot;;
-}
-
-QLineEdit:focus{
-    border:2px solid #56CCF2;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="placeholderText">
-         <string>    example@gmail.com</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QLabel" name="phoneLabel">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:white;</string>
-        </property>
-        <property name="text">
-         <string>Phone Number:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="phoneEdit">
-        <property name="styleSheet">
-         <string notr="true">QLineEdit{
-    background:#2B2B2B;
-    border:2px solid #2F80ED;
-    border-radius:10px;
-    padding-left:10px;
-    color:white;
-    font:15pt &quot;Segoe UI&quot;;
-}
-
-QLineEdit:focus{
-    border:2px solid #56CCF2;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="maxLength">
-         <number>11</number>
-        </property>
-        <property name="placeholderText">
-         <string>09xxxxxxxxx</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
-      <item>
-       <widget class="QLabel" name="passwordLabel">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:white;</string>
-        </property>
-        <property name="text">
-         <string>Password:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="passwordEdit">
-        <property name="styleSheet">
-         <string notr="true">QLineEdit{
-    background:#2B2B2B;
-    border:2px solid #2F80ED;
-    border-radius:10px;
-    padding-left:10px;
-    color:white;
-    font:15pt &quot;Segoe UI&quot;;
-}
-
-QLineEdit:focus{
-    border:2px solid #56CCF2;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="echoMode">
-         <enum>QLineEdit::EchoMode::Password</enum>
-        </property>
-        <property name="placeholderText">
-         <string>password</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
-      <item>
-       <widget class="QLabel" name="confirmPasswordLabel">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:white;</string>
-        </property>
-        <property name="text">
-         <string>Confirm Password:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="confirmPasswordEdit">
-        <property name="styleSheet">
-         <string notr="true">QLineEdit{
-    background:#2B2B2B;
-    border:2px solid #2F80ED;
-    border-radius:10px;
-    padding-left:10px;
-    color:white;
-    font:15pt &quot;Segoe UI&quot;;
-}
-
-QLineEdit:focus{
-    border:2px solid #56CCF2;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="echoMode">
-         <enum>QLineEdit::EchoMode::Password</enum>
-        </property>
-        <property name="placeholderText">
-         <string>confirm password</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <widget class="QPushButton" name="signupButton">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>800</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-
-background:#2C3E50;
-
-color:white;
-
-border:none;
-
-border-radius:12px;
-
-min-height:50px;
-
-font-size:14pt;
-
-font-weight:bold;
-
-}
-
-QPushButton:hover{
-
-background:#3A86FF;
-
-}
-
-QPushButton:pressed{
-
-background:#2563EB;
-
-}</string>
-      </property>
-      <property name="text">
-       <string>SIGN UP</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
   </widget>
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
@@ -429,12 +102,14 @@ QPushButton:pressed{
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;</string>
+    <string notr="true">color:#56CCF2;
+background:transparent;</string>
    </property>
    <property name="text">
     <string>Already have an account?</string>
@@ -491,6 +166,396 @@ background:#2563EB;
    </property>
    <property name="text">
     <string>LOGIN</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="signupButton">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>460</y>
+     <width>381</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+
+background:#2C3E50;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+min-height:50px;
+
+font-size:14pt;
+
+font-weight:bold;
+
+}
+
+QPushButton:hover{
+
+background:#3A86FF;
+
+}
+
+QPushButton:pressed{
+
+background:#2563EB;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>SIGN UP</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nameEdit">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>122</y>
+     <width>311</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Enter your full name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nameLabel">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>122</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka Text</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+background:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Name:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="usernameLabel">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>180</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka Text</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+background:transparent;
+</string>
+   </property>
+   <property name="text">
+    <string>Username:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="usernameEdit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>180</y>
+     <width>261</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Choose a username</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="emailEdit">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>235</y>
+     <width>301</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>    example@gmail.com</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="emailLabel">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>238</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka Text</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+background:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Email:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="phoneLabel">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>296</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka Text</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+background:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Phone Number:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="phoneEdit">
+   <property name="geometry">
+    <rect>
+     <x>581</x>
+     <y>295</y>
+     <width>211</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="maxLength">
+    <number>11</number>
+   </property>
+   <property name="placeholderText">
+    <string>09xxxxxxxxx</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="passwordLabel">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>343</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka Text</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+background:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Password:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="passwordEdit">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>350</y>
+     <width>271</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>password</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="confirmPasswordLabel">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>411</y>
+     <width>191</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka Text</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+background:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Confirm Password:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="confirmPasswordEdit">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>405</y>
+     <width>181</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+    background:#2B2B2B;
+    border:2px solid #2F80ED;
+    border-radius:10px;
+    padding-left:10px;
+    color:white;
+    font:15pt &quot;Segoe UI&quot;;
+}
+
+QLineEdit:focus{
+    border:2px solid #56CCF2;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>confirm password</string>
    </property>
   </widget>
  </widget>

@@ -9,6 +9,11 @@
 #include "custommessagebox.h"
 LoginWindow::LoginWindow(QWidget *parent): QWidget(parent), ui(new Ui::LoginWindow){
     ui->setupUi(this);
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
 }
 
 LoginWindow::~LoginWindow(){
@@ -51,4 +56,11 @@ void LoginWindow::on_loginButton_clicked(){
     else{
         CustomMessageBox::warning(this,"Error","Username or password is incorrect.");
     }
+}
+
+void LoginWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

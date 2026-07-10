@@ -1,7 +1,7 @@
 #ifndef GAMEWINDOW_H
 #define GAMEWINDOW_H
 #include <QWidget>
-
+#include "videobackgroundwidget.h"
 namespace Ui {
 class GameWindow;
 }
@@ -25,6 +25,10 @@ private:
     GameType currentGame;
     void loadGameInformation();
     void loadHistory();
+
+    VideoBackgroundWidget *videoBackground;
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 };
 
 #endif // GAMEWINDOW_H

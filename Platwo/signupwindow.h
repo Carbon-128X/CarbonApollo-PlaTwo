@@ -1,7 +1,7 @@
 #ifndef SIGNUPWINDOW_H
 #define SIGNUPWINDOW_H
 #include <QWidget>
-
+#include "videobackgroundwidget.h"
 namespace Ui {
 class SignupWindow;
 }
@@ -21,6 +21,11 @@ private slots:
 
 private:
     Ui::SignupWindow *ui;
+    VideoBackgroundWidget *videoBackground;
+
+
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 };
 
 #endif // SIGNUPWINDOW_H

@@ -2,7 +2,7 @@
 #define HOSTWINDOW_H
 #include <QWidget>
 #include "gamewindow.h"
-
+#include "videobackgroundwidget.h"
 namespace Ui {
 class HostWindow;
 }
@@ -33,6 +33,10 @@ private:
     int boardSize = 6;
     int gameTime = 0;
     bool timerEnabled = false;
+
+    VideoBackgroundWidget *videoBackground;
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 };
 
 #endif // HOSTWINDOW_H

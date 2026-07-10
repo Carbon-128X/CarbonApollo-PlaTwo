@@ -5,6 +5,12 @@
 
 WelcomeWindow::WelcomeWindow(QWidget *parent) : QWidget(parent), ui(new Ui::WelcomeWindow) {
     ui->setupUi(this);
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
+
 }
 
 WelcomeWindow::~WelcomeWindow() {
@@ -21,4 +27,11 @@ void WelcomeWindow::on_signupButton_clicked() {
     SignupWindow *signup = new SignupWindow();
     signup->show();
     this->close();
+}
+
+void WelcomeWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

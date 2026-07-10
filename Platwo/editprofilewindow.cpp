@@ -8,6 +8,13 @@
 
 EditProfileWindow::EditProfileWindow(QWidget *parent) : QWidget(parent) , ui(new Ui::EditProfileWindow) {
     ui->setupUi(this);
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
+
+
     loadUserData();
 }
 
@@ -102,4 +109,11 @@ void EditProfileWindow::on_backButton_clicked(){
     MainWindow *main = new MainWindow();
     main->show();
     close();
+}
+
+void EditProfileWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

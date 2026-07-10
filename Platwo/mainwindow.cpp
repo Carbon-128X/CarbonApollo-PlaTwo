@@ -9,6 +9,14 @@
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) , ui(new Ui::MainWindow) {
     ui->setupUi(this);
+
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
+
+
     selectedGame = None;
     ui->gameTitle->setText("Welcome, " + UserManager::currentUser.name + "!");
     ui->gameDescription->setText("Choose one of the games from the menu.");
@@ -93,4 +101,11 @@ void MainWindow::on_profileButton_clicked() {
 
 void MainWindow::on_exitButton_clicked() {
     QApplication::quit();
+}
+
+void MainWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

@@ -10,6 +10,12 @@
     <height>700</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Edit form</string>
   </property>
@@ -20,7 +26,7 @@
    <property name="geometry">
     <rect>
      <x>480</x>
-     <y>571</y>
+     <y>560</y>
      <width>241</width>
      <height>50</height>
     </rect>
@@ -57,12 +63,14 @@ QPushButton:pressed{
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>40</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#56CCF2;</string>
+    <string notr="true">color:#56CCF2;
+background:transparent;</string>
    </property>
    <property name="text">
     <string>Edit Profile</string>
@@ -77,17 +85,19 @@ QPushButton:pressed{
      <x>431</x>
      <y>131</y>
      <width>341</width>
-     <height>27</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;</string>
+    <string notr="true">color:white;
+background:transparent;</string>
    </property>
    <property name="text">
     <string>Enter your new information:</string>
@@ -96,20 +106,17 @@ QPushButton:pressed{
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QLineEdit" name="usernameEdit">
    <property name="geometry">
     <rect>
-     <x>431</x>
-     <y>164</y>
+     <x>432</x>
+     <y>225</y>
      <width>341</width>
-     <height>401</height>
+     <height>39</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLineEdit" name="nameEdit">
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
     background:#2B2B2B;
     border:2px solid #2F80ED;
     border-radius:10px;
@@ -121,16 +128,22 @@ QPushButton:pressed{
 QLineEdit:focus{
     border:2px solid #56CCF2;
 }</string>
-      </property>
-      <property name="placeholderText">
-       <string>New Name</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="usernameEdit">
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
+   </property>
+   <property name="placeholderText">
+    <string>New Username</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="passwordEdit">
+   <property name="geometry">
+    <rect>
+     <x>432</x>
+     <y>384</y>
+     <width>341</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
     background:#2B2B2B;
     border:2px solid #2F80ED;
     border-radius:10px;
@@ -142,16 +155,25 @@ QLineEdit:focus{
 QLineEdit:focus{
     border:2px solid #56CCF2;
 }</string>
-      </property>
-      <property name="placeholderText">
-       <string>New Username</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="phoneEdit">
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>New Password</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="confirmPasswordEdit">
+   <property name="geometry">
+    <rect>
+     <x>432</x>
+     <y>437</y>
+     <width>341</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
     background:#2B2B2B;
     border:2px solid #2F80ED;
     border-radius:10px;
@@ -163,19 +185,25 @@ QLineEdit:focus{
 QLineEdit:focus{
     border:2px solid #56CCF2;
 }</string>
-      </property>
-      <property name="maxLength">
-       <number>11</number>
-      </property>
-      <property name="placeholderText">
-       <string>New Phone number</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="emailEdit">
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Confrim Passford</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="emailEdit">
+   <property name="geometry">
+    <rect>
+     <x>432</x>
+     <y>331</y>
+     <width>341</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
     background:#2B2B2B;
     border:2px solid #2F80ED;
     border-radius:10px;
@@ -187,16 +215,22 @@ QLineEdit:focus{
 QLineEdit:focus{
     border:2px solid #56CCF2;
 }</string>
-      </property>
-      <property name="placeholderText">
-       <string>New Email</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="passwordEdit">
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
+   </property>
+   <property name="placeholderText">
+    <string>New Email</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nameEdit">
+   <property name="geometry">
+    <rect>
+     <x>432</x>
+     <y>172</y>
+     <width>341</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
     background:#2B2B2B;
     border:2px solid #2F80ED;
     border-radius:10px;
@@ -208,19 +242,22 @@ QLineEdit:focus{
 QLineEdit:focus{
     border:2px solid #56CCF2;
 }</string>
-      </property>
-      <property name="echoMode">
-       <enum>QLineEdit::EchoMode::Password</enum>
-      </property>
-      <property name="placeholderText">
-       <string>New Password</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="confirmPasswordEdit">
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
+   </property>
+   <property name="placeholderText">
+    <string>New Name</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="phoneEdit">
+   <property name="geometry">
+    <rect>
+     <x>432</x>
+     <y>278</y>
+     <width>341</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
     background:#2B2B2B;
     border:2px solid #2F80ED;
     border-radius:10px;
@@ -232,31 +269,37 @@ QLineEdit:focus{
 QLineEdit:focus{
     border:2px solid #56CCF2;
 }</string>
-      </property>
-      <property name="echoMode">
-       <enum>QLineEdit::EchoMode::Password</enum>
-      </property>
-      <property name="placeholderText">
-       <string>Confrim Passford</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="saveButton">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>60</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
+   </property>
+   <property name="maxLength">
+    <number>11</number>
+   </property>
+   <property name="placeholderText">
+    <string>New Phone number</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveButton">
+   <property name="geometry">
+    <rect>
+     <x>432</x>
+     <y>490</y>
+     <width>341</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>55</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
 
 background:#2C3E50;
 
@@ -285,13 +328,10 @@ QPushButton:pressed{
 background:#2563EB;
 
 }</string>
-      </property>
-      <property name="text">
-       <string>Save Changes</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   </property>
+   <property name="text">
+    <string>Save Changes</string>
+   </property>
   </widget>
  </widget>
  <resources/>

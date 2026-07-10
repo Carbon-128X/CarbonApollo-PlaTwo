@@ -25,11 +25,17 @@
      <height>661</height>
     </rect>
    </property>
+   <property name="maximumSize">
+    <size>
+     <width>1200</width>
+     <height>700</height>
+    </size>
+   </property>
    <property name="styleSheet">
     <string notr="true">QFrame{
 
 background:#151515;
-
+background:transparent;
 border-radius:18px;
 
 }</string>
@@ -266,6 +272,7 @@ border:none;
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>32</pointsize>
       <bold>true</bold>
      </font>
@@ -369,16 +376,16 @@ background:#56CCF2;
   <widget class="QFrame" name="frame_2">
    <property name="geometry">
     <rect>
-     <x>750</x>
+     <x>790</x>
      <y>20</y>
-     <width>431</width>
+     <width>381</width>
      <height>661</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QFrame{
 
-background:#151515;
+background:#002147;
 
 border-radius:18px;
 
@@ -395,12 +402,13 @@ border-radius:18px;
      <rect>
       <x>10</x>
       <y>410</y>
-      <width>411</width>
+      <width>361</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>20</pointsize>
       <bold>true</bold>
      </font>
@@ -419,10 +427,10 @@ background:transparent;</string>
    <widget class="QLabel" name="gameImageLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>411</width>
-      <height>391</height>
+      <x>20</x>
+      <y>30</y>
+      <width>341</width>
+      <height>371</height>
      </rect>
     </property>
     <property name="font">
@@ -448,11 +456,18 @@ background:transparent;</string>
    <widget class="QGroupBox" name="connectionGroupBox">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>70</x>
       <y>490</y>
-      <width>251</width>
+      <width>241</width>
       <height>141</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka Text</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QGroupBox{
@@ -488,6 +503,7 @@ QGroupBox::title{
      </property>
      <property name="font">
       <font>
+       <family>Sitka Text</family>
        <pointsize>-1</pointsize>
        <bold>true</bold>
       </font>
@@ -532,6 +548,7 @@ QRadioButton::indicator:checked
      </property>
      <property name="font">
       <font>
+       <family>Sitka Text</family>
        <pointsize>-1</pointsize>
        <bold>true</bold>
       </font>

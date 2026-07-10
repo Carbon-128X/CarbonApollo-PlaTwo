@@ -10,6 +10,12 @@
     <height>700</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -27,12 +33,14 @@
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>35</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#56CCF2;</string>
+    <string notr="true">color:#56CCF2;
+background:transparent;</string>
    </property>
    <property name="text">
     <string>Host Game Settings</string>
@@ -49,6 +57,13 @@
      <width>361</width>
      <height>371</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka Text</family>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QGroupBox{
@@ -116,6 +131,7 @@ color:white;
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
@@ -142,6 +158,7 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
@@ -219,6 +236,7 @@ QCheckBox::indicator:checked
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
@@ -236,12 +254,13 @@ background:transparent;</string>
      <rect>
       <x>42</x>
       <y>224</y>
-      <width>115</width>
-      <height>51</height>
+      <width>131</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
@@ -314,9 +333,9 @@ color:white;
     </property>
     <property name="geometry">
      <rect>
-      <x>208</x>
+      <x>228</x>
       <y>157</y>
-      <width>111</width>
+      <width>91</width>
       <height>51</height>
      </rect>
     </property>
@@ -357,12 +376,13 @@ color:white;
      <rect>
       <x>40</x>
       <y>164</y>
-      <width>162</width>
-      <height>30</height>
+      <width>181</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
@@ -491,12 +511,14 @@ background:#56CCF2;
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;</string>
+    <string notr="true">color:white;
+background:transparent;</string>
    </property>
    <property name="text">
     <string>Waiting for guest...</string>

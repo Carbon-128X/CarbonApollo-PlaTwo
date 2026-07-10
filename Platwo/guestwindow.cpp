@@ -5,6 +5,12 @@
 
 GuestWindow::GuestWindow(GameWindow::GameType game, QWidget *parent) : QWidget(parent), ui(new Ui::GuestWindow), currentGame(game) {
     ui->setupUi(this);
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
+
     initializeWindow();
 }
 
@@ -60,4 +66,11 @@ void GuestWindow::on_backButton_clicked() {
     GameWindow *game = new GameWindow(currentGame);
     game->show();
     close();
+}
+
+void GuestWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

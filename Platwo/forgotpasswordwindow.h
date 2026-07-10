@@ -1,7 +1,7 @@
 #ifndef FORGOTPASSWORDWINDOW_H
 #define FORGOTPASSWORDWINDOW_H
 #include <QWidget>
-
+#include "videobackgroundwidget.h"
 namespace Ui {
 class ForgotPasswordWindow;
 }
@@ -19,6 +19,10 @@ private slots:
 
 private:
     Ui::ForgotPasswordWindow *ui;
+
+    VideoBackgroundWidget *videoBackground;
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 };
 
 #endif // FORGOTPASSWORDWINDOW_H

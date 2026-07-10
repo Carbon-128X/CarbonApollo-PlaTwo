@@ -1,5 +1,5 @@
 QT += widgets
-
+QT += multimedia multimediawidgets
 CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -25,6 +25,7 @@ SOURCES += \
     signupwindow.cpp \
     user.cpp \
     usermanager.cpp \
+    videobackgroundwidget.cpp \
     welcomewindow.cpp \
     widget.cpp \
 
@@ -49,6 +50,7 @@ HEADERS += \
     signupwindow.h \
     user.h \
     usermanager.h \
+    videobackgroundwidget.h \
     welcomewindow.h \
     widget.h \
 

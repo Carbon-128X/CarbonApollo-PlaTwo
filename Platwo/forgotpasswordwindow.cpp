@@ -8,6 +8,12 @@
 #include "custommessagebox.h"
 ForgotPasswordWindow::ForgotPasswordWindow(QWidget *parent): QWidget(parent), ui(new Ui::ForgotPasswordWindow){
     ui->setupUi(this);
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
+
 }
 
 ForgotPasswordWindow::~ForgotPasswordWindow(){
@@ -69,4 +75,11 @@ void ForgotPasswordWindow::on_changePasswordButton_clicked()
     else{
         CustomMessageBox::warning(this, "Error", "Phone number not found.");
     }
+}
+
+void ForgotPasswordWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

@@ -125,6 +125,7 @@ bool DotsAndBoxes::applyMove(const Move& move) {
         return false;
 
     lines_.insert(line);
+    lineOwner_[line] = current_;
 
     // checking if some boxes become complete after we draw this line
     int completed = 0;
@@ -213,8 +214,34 @@ void DotsAndBoxes::loadState(int rows, int cols, int current,
     score_[2] = score2;
 
     lines_.clear();
-    for (auto it = lines.begin(); it != lines.end(); it++)
+    lineOwner_.clear();
+    for (auto it = lines.begin(); it != lines.end(); it++){
         lines_.insert(sorted(it->from, it->to));
-
+        lineOwner_[sorted(it->from,it->to)] = current_;
+    }
     boxOwner_ = BoxOwners;
+}
+
+
+int DotsAndBoxes::lineOwner(int from,int to) const {
+    auto p = sorted(from,to);
+    auto it = lineOwner_.find(p);
+
+    if(it == lineOwner_.end()){
+        return 0;
+    }
+    return it->second;
+}
+
+map<pair<int,int>,int> DotsAndBoxes::lineOwners() const {
+    return lineOwner_;
+}
+
+void DotsAndBoxes::forceNextPlayer() {
+    if(current_ == 1){
+        current_ = 2;
+    }
+    else{
+        current_ = 1;
+    }
 }

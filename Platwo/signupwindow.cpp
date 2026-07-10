@@ -9,6 +9,11 @@
 #include "custommessagebox.h"
 SignupWindow::SignupWindow(QWidget *parent) : QWidget(parent) , ui(new Ui::SignupWindow) {
     ui->setupUi(this);
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
 }
 
 SignupWindow::~SignupWindow() {
@@ -85,4 +90,11 @@ void SignupWindow::on_signupButton_clicked() {
     else{
         CustomMessageBox::warning(this,"Error", "Username or phone number already exists.");
     }
+}
+
+void SignupWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

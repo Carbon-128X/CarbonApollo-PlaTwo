@@ -6,6 +6,12 @@
 
 Widget::Widget(QWidget *parent) : QWidget(parent), ui(new Ui::Widget) , timer(new QTimer(this)) , progress(0) {
     ui->setupUi(this);
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
+
     ui->loadingBar->setValue(0);
     ui->subtitleLabel->hide();
     startLogoAnimation();
@@ -79,4 +85,11 @@ void Widget::startLogoAnimation() {
 });
 
     group->start();
+}
+
+void Widget::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

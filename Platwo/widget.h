@@ -6,6 +6,7 @@
 #include <QPropertyAnimation>
 #include <QSequentialAnimationGroup>
 #include <QGraphicsOpacityEffect>
+#include "videobackgroundwidget.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Widget;
@@ -27,6 +28,11 @@ private:
     QTimer *timer;
     int progress;
     QSequentialAnimationGroup *group;
+    VideoBackgroundWidget *videoBackground;
+
+
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 };
 
 #endif // WIDGET_H

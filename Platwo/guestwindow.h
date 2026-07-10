@@ -2,7 +2,7 @@
 #define GUESTWINDOW_H
 #include <QWidget>
 #include "gamewindow.h"
-
+#include "videobackgroundwidget.h"
 namespace Ui {
 class GuestWindow;
 }
@@ -23,6 +23,10 @@ private:
     GameWindow::GameType currentGame;
     void initializeWindow();
     bool validateInput();
+
+    VideoBackgroundWidget *videoBackground;
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 };
 
 #endif // GUESTWINDOW_H

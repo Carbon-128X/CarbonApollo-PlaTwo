@@ -12,6 +12,12 @@
 #include "custommessagebox.h"
 GameWindow::GameWindow(GameType game, QWidget *parent): QWidget(parent), ui(new Ui::GameWindow), currentGame(game) {
     ui->setupUi(this);
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
+
     ui->historyTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->historyTable->horizontalHeader()->setStretchLastSection(true);
     ui->historyTable->verticalHeader()->setVisible(false);
@@ -98,4 +104,11 @@ void GameWindow::on_startGameButton_clicked()
     else {
         CustomMessageBox::warning( this,"Role","Please choose Host or Guest first." );
     }
+}
+
+void GameWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

@@ -6,6 +6,12 @@
 
 HostWindow::HostWindow(GameWindow::GameType game, QWidget *parent): QWidget(parent),ui(new Ui::HostWindow),currentGame(game){
     ui->setupUi(this);
+
+    videoBackground = new VideoBackgroundWidget(this);
+    videoBackground->setGeometry(rect());
+    videoBackground->lower();
+    videoBackground->setVideo(":/images/images/Background.mp4");
+
     initializeWindow();
 }
 
@@ -95,4 +101,11 @@ int HostWindow::getGameTime() const {
 
 bool HostWindow::hasTimer() const {
     return timerEnabled;
+}
+
+void HostWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event);
+
+    if(videoBackground)
+        videoBackground->setGeometry(rect());
 }

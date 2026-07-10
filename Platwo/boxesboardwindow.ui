@@ -56,13 +56,14 @@ border:none;</string>
      <rect>
       <x>20</x>
       <y>0</y>
-      <width>101</width>
+      <width>151</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Sitka Text</family>
+      <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -79,13 +80,14 @@ background:transparent;</string>
      <rect>
       <x>20</x>
       <y>50</y>
-      <width>101</width>
+      <width>141</width>
       <height>201</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Sitka Text</family>
+      <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -108,6 +110,7 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>11</pointsize>
       <bold>true</bold>
      </font>
@@ -132,6 +135,7 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>11</pointsize>
       <bold>true</bold>
      </font>
@@ -156,6 +160,7 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>11</pointsize>
       <bold>true</bold>
      </font>
@@ -180,6 +185,7 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>11</pointsize>
       <bold>true</bold>
      </font>
@@ -204,6 +210,7 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>11</pointsize>
       <bold>true</bold>
      </font>
@@ -228,6 +235,7 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
+      <family>Sitka Text</family>
       <pointsize>11</pointsize>
       <bold>true</bold>
      </font>
@@ -385,6 +393,7 @@ background:#2563EB;
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
@@ -408,6 +417,7 @@ background:transparent;</string>
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
@@ -432,6 +442,7 @@ background:transparent;</string>
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
@@ -448,14 +459,15 @@ background:transparent;</string>
   <widget class="QLabel" name="timerTitleLabel">
    <property name="geometry">
     <rect>
-     <x>630</x>
+     <x>620</x>
      <y>100</y>
-     <width>101</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
@@ -482,6 +494,12 @@ background:transparent;</string>
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1200</width>
+     <height>700</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">background: transparent;

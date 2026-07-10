@@ -3,7 +3,6 @@
 #include <QTimer>
 #include <QWidget>
 #include "logic/dotsAndBoxes.h"
-
 namespace Ui {
 class BoxesBoardWindow;
 }
@@ -35,14 +34,13 @@ private:
     int turnTime = 0;
     int remainingTime = 0;
     void startTurnTimer();
+
 private slots:
     void on_exitButton_clicked();
     void on_restartButton_clicked();
     void on_saveButton_clicked();
     void refreshGameUI();
     void onTimerTick();
-
-
 };
 
 #endif

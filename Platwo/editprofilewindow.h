@@ -1,7 +1,7 @@
 #ifndef EDITPROFILEWINDOW_H
 #define EDITPROFILEWINDOW_H
 #include <QWidget>
-
+#include "videobackgroundwidget.h"
 namespace Ui {
 class EditProfileWindow;
 }
@@ -21,6 +21,10 @@ private:
    Ui::EditProfileWindow *ui;
    void loadUserData();
    bool validateInput();
+
+   VideoBackgroundWidget *videoBackground;
+protected:
+   void resizeEvent(QResizeEvent *event) override;
 
 };
 
