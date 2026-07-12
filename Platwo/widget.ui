@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>700</height>
+    <width>1000</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1200</width>
-    <height>700</height>
+    <width>1000</width>
+    <height>600</height>
    </size>
   </property>
   <property name="font">
@@ -31,23 +31,23 @@
   <widget class="QLabel" name="subtitleLabel">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>315</y>
-     <width>541</width>
-     <height>40</height>
+     <x>140</x>
+     <y>425</y>
+     <width>721</width>
+     <height>191</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>20</pointsize>
+     <pointsize>18</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#A0A0A0;
-letter-spacing:4px;
+    <string notr="true">color:#2c0ac6;
+letter-spacing:2px;
 background:transparent;</string>
    </property>
    <property name="text">
@@ -60,10 +60,10 @@ background:transparent;</string>
   <widget class="QProgressBar" name="loadingBar">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>660</y>
-     <width>981</width>
-     <height>13</height>
+     <x>40</x>
+     <y>566</y>
+     <width>921</width>
+     <height>12</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -116,8 +116,8 @@ border-radius:5px;
    </property>
    <property name="geometry">
     <rect>
-     <x>317</x>
-     <y>12</y>
+     <x>220</x>
+     <y>105</y>
      <width>128</width>
      <height>411</height>
     </rect>
@@ -125,14 +125,14 @@ border-radius:5px;
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>160</pointsize>
+     <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#A0A0A0;
-letter-spacing:4px;
+    <string notr="true">color:#696969;
+letter-spacing:2px;
 background:transparent;</string>
    </property>
    <property name="text">
@@ -148,8 +148,8 @@ background:transparent;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>528</x>
-     <y>12</y>
+     <x>440</x>
+     <y>105</y>
      <width>147</width>
      <height>411</height>
     </rect>
@@ -157,14 +157,14 @@ background:transparent;</string>
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>160</pointsize>
+     <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#A0A0A0;
-letter-spacing:4px;
+    <string notr="true">color:#696969;
+letter-spacing:2px;
 background:transparent;</string>
    </property>
    <property name="text">
@@ -180,8 +180,8 @@ background:transparent;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>12</y>
+     <x>720</x>
+     <y>105</y>
      <width>190</width>
      <height>411</height>
     </rect>
@@ -189,18 +189,21 @@ background:transparent;</string>
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>160</pointsize>
+     <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#A0A0A0;
-letter-spacing:4px;
+    <string notr="true">color:#696969;
+letter-spacing:2px;
 background:transparent;</string>
    </property>
    <property name="text">
     <string>O</string>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -212,22 +215,23 @@ background:transparent;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>639</x>
-     <y>12</y>
+     <x>550</x>
+     <y>90</y>
      <width>251</width>
-     <height>411</height>
+     <height>441</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>160</pointsize>
+     <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#56CCF2;
+    <string notr="true">color:#000000;
+letter-spacing:2px;
 background:transparent;</string>
    </property>
    <property name="text">
@@ -243,8 +247,8 @@ background:transparent;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>424</x>
-     <y>12</y>
+     <x>320</x>
+     <y>105</y>
      <width>171</width>
      <height>411</height>
     </rect>
@@ -252,13 +256,14 @@ background:transparent;</string>
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>160</pointsize>
+     <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#56CCF2;
+    <string notr="true">color:#000000;
+letter-spacing:2px;
 background:transparent;</string>
    </property>
    <property name="text">
@@ -274,8 +279,8 @@ background:transparent;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>12</y>
+     <x>110</x>
+     <y>105</y>
      <width>154</width>
      <height>411</height>
     </rect>
@@ -283,7 +288,7 @@ background:transparent;</string>
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>160</pointsize>
+     <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
      <underline>false</underline>
@@ -291,7 +296,8 @@ background:transparent;</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#56CCF2;
+    <string notr="true">color:#000000;
+letter-spacing:2px;
 background:transparent;</string>
    </property>
    <property name="text">

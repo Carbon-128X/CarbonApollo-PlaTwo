@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>700</height>
+    <width>1000</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -25,14 +25,15 @@
   <widget class="QPushButton" name="loginButton">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>390</y>
-     <width>321</width>
-     <height>61</height>
+     <x>550</x>
+     <y>300</y>
+     <width>281</width>
+     <height>48</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>-1</pointsize>
      <bold>true</bold>
     </font>
@@ -40,7 +41,7 @@
    <property name="styleSheet">
     <string notr="true">QPushButton{
 
-background:#2F80ED;
+background:#0266b6;
 
 color:white;
 
@@ -54,13 +55,13 @@ font-size:18px;
 
 QPushButton:hover{
 
-background:#56CCF2;
+background:#0284e8;
 
 }
 
 QPushButton:pressed{
 
-background:#1E5FBF;
+background:#0284e8;
 
 }</string>
    </property>
@@ -77,14 +78,15 @@ background:#1E5FBF;
   <widget class="QPushButton" name="signupButton">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>460</y>
-     <width>321</width>
-     <height>61</height>
+     <x>550</x>
+     <y>360</y>
+     <width>281</width>
+     <height>48</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Sitka Text</family>
      <pointsize>-1</pointsize>
      <bold>true</bold>
     </font>
@@ -92,7 +94,7 @@ background:#1E5FBF;
    <property name="styleSheet">
     <string notr="true">QPushButton{
 
-background:#2F80ED;
+background:#0266b6;
 
 color:white;
 
@@ -106,13 +108,13 @@ font-size:18px;
 
 QPushButton:hover{
 
-background:#56CCF2;
+background:#0284e8;
 
 }
 
 QPushButton:pressed{
 
-background:#1E5FBF;
+background:#0284e8;
 
 }</string>
    </property>
@@ -123,25 +125,25 @@ background:#1E5FBF;
   <widget class="QLabel" name="titleLabel">
    <property name="geometry">
     <rect>
-     <x>3</x>
-     <y>113</y>
-     <width>1181</width>
-     <height>111</height>
+     <x>130</x>
+     <y>30</y>
+     <width>1121</width>
+     <height>201</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>55</pointsize>
+     <pointsize>28</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#56CCF2;
+    <string notr="true">color:#2c0ac6;
 background:transparent;</string>
    </property>
    <property name="text">
-    <string>WELCOME</string>
+    <string>Welcome To PlaTwo</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -150,16 +152,16 @@ background:transparent;</string>
   <widget class="QLabel" name="subTitleLabel">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>290</y>
-     <width>341</width>
-     <height>40</height>
+     <x>542</x>
+     <y>140</y>
+     <width>301</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>18</pointsize>
+     <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
    </property>

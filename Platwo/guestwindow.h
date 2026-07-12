@@ -3,6 +3,8 @@
 #include <QWidget>
 #include "gamewindow.h"
 #include "videobackgroundwidget.h"
+#include <QColor>
+#include <QVector>
 namespace Ui {
 class GuestWindow;
 }
@@ -13,6 +15,7 @@ class GuestWindow : public QWidget {
 public:
     explicit GuestWindow(GameWindow::GameType game, QWidget *parent = nullptr);
     ~GuestWindow();
+    void removeColor(const QColor &color);
 
 private slots:
     void on_joinRoomButton_clicked();
@@ -25,6 +28,8 @@ private:
     bool validateInput();
 
     VideoBackgroundWidget *videoBackground;
+    QVector<QColor> availableColors;
+    QColor selectedGuestColor;
 protected:
     void resizeEvent(QResizeEvent *event) override;
 };

@@ -12,7 +12,7 @@ ForgotPasswordWindow::ForgotPasswordWindow(QWidget *parent): QWidget(parent), ui
     videoBackground = new VideoBackgroundWidget(this);
     videoBackground->setGeometry(rect());
     videoBackground->lower();
-    videoBackground->setVideo(":/images/images/Background.mp4");
+    videoBackground->setVideo(":/images/images/20.mp4");
 
 }
 

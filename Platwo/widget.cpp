@@ -10,7 +10,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent), ui(new Ui::Widget) , timer(ne
     videoBackground = new VideoBackgroundWidget(this);
     videoBackground->setGeometry(rect());
     videoBackground->lower();
-    videoBackground->setVideo(":/images/images/Background.mp4");
+    videoBackground->setVideo(":/images/images/1.mp4");
 
     ui->loadingBar->setValue(0);
     ui->subtitleLabel->hide();

@@ -3,16 +3,65 @@
 #include "gamewindow.h"
 #include <QIntValidator>
 #include "boxesboardwindow.h"
+#include <QPixmap>
+#include <QPainter>
+#include <QIcon>
 
 HostWindow::HostWindow(GameWindow::GameType game, QWidget *parent): QWidget(parent),ui(new Ui::HostWindow),currentGame(game){
     ui->setupUi(this);
 
+    availableColors = {
+            Qt::red,
+            Qt::blue,
+            Qt::green,
+            Qt::yellow,
+            Qt::cyan,
+            Qt::magenta,
+            QColor("#FF8800"),
+            QColor("#8A2BE2"),
+            QColor("#00AA55"),
+            QColor("#FF1493")
+        };
+
+    QStringList names = {
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Cyan",
+            "Magenta",
+            "Orange",
+            "Purple",
+            "Dark Green",
+            "Pink"
+        };
+
+    for(int i=0;i<availableColors.size();i++) {
+        QPixmap pix(20,20);
+        pix.fill(Qt::transparent);
+        QPainter painter(&pix);
+        painter.setRenderHint(QPainter::Antialiasing);
+        painter.setBrush(availableColors[i]);
+        painter.setPen(Qt::black);
+        painter.drawEllipse(2,2,16,16);
+        ui->colorComboBox->addItem(QIcon(pix), names[i]);
+    }
+
     videoBackground = new VideoBackgroundWidget(this);
     videoBackground->setGeometry(rect());
     videoBackground->lower();
-    videoBackground->setVideo(":/images/images/Background.mp4");
+    videoBackground->setVideo(":/images/images/1111.png");
 
     initializeWindow();
+
+
+    selectedHostColor = availableColors[0];
+
+    connect(ui->colorComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this,[=](int index){
+         if(index >= 0 && index < availableColors.size()){
+            selectedHostColor = availableColors[index];
+        }
+    });
 }
 
 HostWindow::~HostWindow() {
@@ -79,7 +128,7 @@ void HostWindow::on_createRoomButton_clicked() {
         gameTime = ui->timeEdit->text().toInt();
     }
     //-----------------------------------
-    BoxesBoardWindow *board = new BoxesBoardWindow( boardSize, timerEnabled, gameTime);
+    BoxesBoardWindow *board = new BoxesBoardWindow( boardSize, timerEnabled, gameTime, "HostUser","GuestUser", selectedHostColor,Qt::red );
     board->show();
     this->close();
 
@@ -108,4 +157,8 @@ void HostWindow::resizeEvent(QResizeEvent *event) {
 
     if(videoBackground)
         videoBackground->setGeometry(rect());
+}
+
+QColor HostWindow::hostColor() const {
+    return selectedHostColor;
 }

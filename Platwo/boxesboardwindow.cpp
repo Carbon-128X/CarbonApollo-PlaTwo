@@ -4,14 +4,21 @@
 #include <QMessageBox>
 #include <QPixmap>
 #include <QDebug>
-BoxesBoardWindow::BoxesBoardWindow(int board, bool timer, int time,QWidget *parent)
-    : QWidget(parent),ui(new Ui::BoxesBoardWindow),boardSize(board),timerEnabled(timer),gameTime(time) {
+BoxesBoardWindow::BoxesBoardWindow( int board, bool timer, int time,
+     const QString &p1Name, const QString &p2Name,
+     const QColor &p1Color, const QColor &p2Color,
+     QWidget *parent) : QWidget(parent), ui(new Ui::BoxesBoardWindow), boardSize(board), timerEnabled(timer), gameTime(time),
+     player1Name(p1Name),
+     player2Name(p2Name),
+     player1Color(p1Color),
+     player2Color(p2Color)
+{
     ui->setupUi(this);
     turnTime = gameTime;
     remainingTime = turnTime;
     turnTimer = new QTimer(this);
     connect( turnTimer, &QTimer::timeout, this, &BoxesBoardWindow::onTimerTick );
-    ui->backgroundLabel->setPixmap( QPixmap(":/images/images/4545.jpg"));
+    ui->backgroundLabel->setPixmap( QPixmap(":/images/images/454545.png"));
     ui->backgroundLabel->setScaledContents(true);
 
     //---------------------------------
@@ -51,13 +58,17 @@ void BoxesBoardWindow::initializeWindow() {
 }
 
 void BoxesBoardWindow::initializePlayers() {
-    ui->player1NameLabel->setText("Username");
-    ui->player2NameLabel->setText("Username");
-    ui->player1ColorLabel->setText("Color : Blue");
-    ui->player2ColorLabel->setText("Color : Red");
+    QString hostName = player1Name.left(4);
+    QString guestName = player2Name.left(4);
+    ui->player1NameLabel->setText(hostName);
+    ui->player2NameLabel->setText(guestName);
+    ui->player1ColorLabel->setText("꧁                     ꧂");
+    ui->player2ColorLabel->setText("꧁                     ꧂ ");
+    ui->player1ColorLabel->setStyleSheet(QString("color:%1;").arg(player1Color.name()));
+    ui->player2ColorLabel->setStyleSheet( QString("color:%1;").arg(player2Color.name()));
     ui->player1ScoreLabel->setText( QString("Score : %1").arg(game->score(1)));
     ui->player2ScoreLabel->setText( QString("Score : %1").arg(game->score(2)));
-    ui->boardWidget->setPlayers( ui->player1NameLabel->text(), ui->player2NameLabel->text(), QColor(50,170,255), QColor(255,80,80));
+    ui->boardWidget->setPlayers( hostName, guestName, player1Color, player2Color);
 }
 
 void BoxesBoardWindow::initializeButtons() {
@@ -87,8 +98,8 @@ void BoxesBoardWindow::on_saveButton_clicked() {
 }
 
 void BoxesBoardWindow::on_restartButton_clicked() {
-    auto result = QMessageBox::question(this,"Restart", "Restart current game?");
-    if(result==QMessageBox::Yes) {
+    //auto result = CustomMessageBox::question(this,"Restart", "Restart current game?");
+   // if(result==CustomMessageBox::Yes) {
         delete game;
        game = new DotsAndBoxes(boardSize, boardSize);
         ui->boardWidget->setGame(game);
@@ -102,7 +113,7 @@ void BoxesBoardWindow::on_restartButton_clicked() {
         else{
             ui->timerLabel->setText("--:--");
         }
-    }
+   // }
 }
 
 void BoxesBoardWindow::on_exitButton_clicked() {

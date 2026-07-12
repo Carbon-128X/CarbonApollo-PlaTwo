@@ -11,7 +11,12 @@ class BoxesBoardWindow : public QWidget {
     Q_OBJECT
 
 public:
-    explicit BoxesBoardWindow( int boardSize, bool timerEnabled, int gameTime, QWidget *parent = nullptr );
+    explicit BoxesBoardWindow( int boardSize, bool timerEnabled, int gameTime,
+        const QString &player1Name,
+        const QString &player2Name,
+        const QColor &player1Color,
+        const QColor &player2Color,
+        QWidget *parent = nullptr);
     ~BoxesBoardWindow();
 
 
@@ -34,6 +39,11 @@ private:
     int turnTime = 0;
     int remainingTime = 0;
     void startTurnTimer();
+
+    QString player1Name;
+    QString player2Name;
+    QColor player1Color;
+    QColor player2Color;
 
 private slots:
     void on_exitButton_clicked();

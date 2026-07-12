@@ -2,16 +2,64 @@
 #include "ui_guestwindow.h"
 #include "gamewindow.h"
 #include <QIntValidator>
-
+#include <QPainter>
+#include <QPixmap>
+#include <QIcon>
 GuestWindow::GuestWindow(GameWindow::GameType game, QWidget *parent) : QWidget(parent), ui(new Ui::GuestWindow), currentGame(game) {
     ui->setupUi(this);
+
+    availableColors = {
+            Qt::red,
+            Qt::blue,
+            Qt::green,
+            Qt::yellow,
+            Qt::cyan,
+            Qt::magenta,
+            QColor("#FF8800"),
+            QColor("#8A2BE2"),
+            QColor("#00AA55"),
+            QColor("#FF1493")
+        };
+
+    QStringList names = {
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Cyan",
+            "Magenta",
+            "Orange",
+            "Purple",
+            "Dark Green",
+            "Pink"
+        };
+
+    ui->colorComboBox->clear();
+    for(int i=0;i<availableColors.size();i++) {
+        QPixmap pix(20,20);
+        pix.fill(Qt::transparent);
+        QPainter painter(&pix);
+        painter.setRenderHint(QPainter::Antialiasing);
+        painter.setBrush(availableColors[i]);
+        painter.setPen(Qt::black);
+        painter.drawEllipse(2,2,16,16);
+        ui->colorComboBox->addItem(QIcon(pix), names[i]);
+    }
 
     videoBackground = new VideoBackgroundWidget(this);
     videoBackground->setGeometry(rect());
     videoBackground->lower();
-    videoBackground->setVideo(":/images/images/Background.mp4");
+    videoBackground->setVideo(":/images/images/1111.png");
 
     initializeWindow();
+
+    selectedGuestColor = availableColors[0];
+
+    connect(ui->colorComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this,[=](int index){
+        if(index >= 0 && index < availableColors.size()){
+            selectedGuestColor = availableColors[index];
+        }
+    });
 }
 
 GuestWindow::~GuestWindow( ){
@@ -73,4 +121,19 @@ void GuestWindow::resizeEvent(QResizeEvent *event) {
 
     if(videoBackground)
         videoBackground->setGeometry(rect());
+}
+
+
+void GuestWindow::removeColor(const QColor &color) {
+    for(int i=0;i<availableColors.size();i++) {
+        if(availableColors[i] == color) {
+            availableColors.remove(i);
+            ui->colorComboBox->removeItem(i);
+            break;
+        }
+    }
+
+    if(!availableColors.isEmpty()) {
+        selectedGuestColor = availableColors[ui->colorComboBox->currentIndex()];
+    }
 }

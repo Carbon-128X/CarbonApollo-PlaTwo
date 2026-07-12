@@ -9,7 +9,7 @@ WelcomeWindow::WelcomeWindow(QWidget *parent) : QWidget(parent), ui(new Ui::Welc
     videoBackground = new VideoBackgroundWidget(this);
     videoBackground->setGeometry(rect());
     videoBackground->lower();
-    videoBackground->setVideo(":/images/images/Background.mp4");
+    videoBackground->setVideo(":/images/images/3-4.mp4");
 
 }
 

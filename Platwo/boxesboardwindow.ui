@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>700</height>
+    <width>1000</width>
+    <height>562</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>562</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -21,15 +27,24 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1200</width>
-     <height>700</height>
+     <width>1000</width>
+     <height>562</height>
     </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1000</width>
+     <height>562</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#121212;</string>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>images/4545.jpg</pixmap>
+    <pixmap>images/454545.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -41,10 +56,10 @@
   <widget class="QWidget" name="infoWidget" native="true">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>130</y>
-     <width>161</width>
-     <height>421</height>
+     <x>60</x>
+     <y>70</y>
+     <width>191</width>
+     <height>451</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -54,10 +69,10 @@ border:none;</string>
    <widget class="QLabel" name="player1TitleLabel">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>0</y>
-      <width>151</width>
-      <height>51</height>
+      <x>43</x>
+      <y>3</y>
+      <width>251</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
@@ -78,10 +93,10 @@ background:transparent;</string>
    <widget class="QLabel" name="player2TitleLabel">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>50</y>
+      <x>41</x>
+      <y>48</y>
       <width>141</width>
-      <height>201</height>
+      <height>221</height>
      </rect>
     </property>
     <property name="font">
@@ -102,10 +117,10 @@ background:transparent;</string>
    <widget class="QLabel" name="player1NameLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>121</width>
-      <height>81</height>
+      <x>45</x>
+      <y>-40</y>
+      <width>111</width>
+      <height>241</height>
      </rect>
     </property>
     <property name="font">
@@ -127,10 +142,10 @@ background:transparent;</string>
    <widget class="QLabel" name="player1ColorLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>111</width>
-      <height>141</height>
+      <x>10</x>
+      <y>-90</y>
+      <width>201</width>
+      <height>251</height>
      </rect>
     </property>
     <property name="font">
@@ -146,16 +161,16 @@ background:transparent;</string>
 background:transparent;</string>
     </property>
     <property name="text">
-     <string>Color : Blue</string>
+     <string>꧁                     ꧂</string>
     </property>
    </widget>
    <widget class="QLabel" name="player1ScoreLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>101</width>
-      <height>201</height>
+      <x>48</x>
+      <y>-50</y>
+      <width>111</width>
+      <height>331</height>
      </rect>
     </property>
     <property name="font">
@@ -177,10 +192,10 @@ background:transparent;</string>
    <widget class="QLabel" name="player2NameLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>45</x>
       <y>60</y>
       <width>101</width>
-      <height>231</height>
+      <height>271</height>
      </rect>
     </property>
     <property name="font">
@@ -202,10 +217,10 @@ background:transparent;</string>
    <widget class="QLabel" name="player2ColorLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>70</y>
-      <width>111</width>
-      <height>271</height>
+      <x>10</x>
+      <y>30</y>
+      <width>211</width>
+      <height>241</height>
      </rect>
     </property>
     <property name="font">
@@ -221,16 +236,16 @@ background:transparent;</string>
 background:transparent;</string>
     </property>
     <property name="text">
-     <string>Color : Blue</string>
+     <string>꧁                     ꧂</string>
     </property>
    </widget>
    <widget class="QLabel" name="player2ScoreLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>90</y>
-      <width>101</width>
-      <height>291</height>
+      <x>50</x>
+      <y>80</y>
+      <width>151</width>
+      <height>301</height>
      </rect>
     </property>
     <property name="font">
@@ -253,9 +268,9 @@ background:transparent;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>269</y>
-      <width>101</width>
-      <height>40</height>
+      <y>268</y>
+      <width>141</width>
+      <height>45</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -297,9 +312,9 @@ background:#2563EB;
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>310</y>
-      <width>101</width>
-      <height>40</height>
+      <y>320</y>
+      <width>141</width>
+      <height>45</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -341,9 +356,9 @@ background:#2563EB;
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>351</y>
-      <width>101</width>
-      <height>40</height>
+      <y>371</y>
+      <width>141</width>
+      <height>45</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -385,9 +400,9 @@ background:#2563EB;
   <widget class="QLabel" name="currentTurnTitle">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>90</y>
-     <width>131</width>
+     <x>570</x>
+     <y>30</y>
+     <width>101</width>
      <height>51</height>
     </rect>
    </property>
@@ -409,9 +424,9 @@ background:transparent;</string>
   <widget class="QLabel" name="currentTurnLabel">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>90</y>
-     <width>131</width>
+     <x>640</x>
+     <y>30</y>
+     <width>91</width>
      <height>51</height>
     </rect>
    </property>
@@ -434,9 +449,9 @@ background:transparent;</string>
   <widget class="QLabel" name="timerLabel">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>90</y>
-     <width>131</width>
+     <x>820</x>
+     <y>30</y>
+     <width>101</width>
      <height>51</height>
     </rect>
    </property>
@@ -459,9 +474,9 @@ background:transparent;</string>
   <widget class="QLabel" name="timerTitleLabel">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>100</y>
-     <width>111</width>
+     <x>740</x>
+     <y>40</y>
+     <width>91</width>
      <height>31</height>
     </rect>
    </property>
@@ -483,10 +498,10 @@ background:transparent;</string>
   <widget class="BoardWidget" name="boardWidget" native="true">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>140</y>
-     <width>415</width>
-     <height>415</height>
+     <x>430</x>
+     <y>90</y>
+     <width>420</width>
+     <height>420</height>
     </rect>
    </property>
    <property name="sizePolicy">

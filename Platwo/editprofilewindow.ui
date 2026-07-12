@@ -6,14 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>700</height>
+    <width>1000</width>
+    <height>600</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1200</width>
-    <height>700</height>
+    <width>1000</width>
+    <height>600</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -25,19 +31,25 @@
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>560</y>
-     <width>241</width>
-     <height>50</height>
+     <x>700</x>
+     <y>510</y>
+     <width>180</width>
+     <height>38</height>
     </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>38</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
     background:#2F80ED;
     color:white;
     border-radius:12px;
-    font:16pt &quot;Segoe UI&quot;;
-    min-height:50px;
+    font:12pt &quot;Segoe UI&quot;;
+    min-height:38px;
 }
 
 QPushButton:hover{
@@ -55,16 +67,16 @@ QPushButton:pressed{
   <widget class="QLabel" name="editprofileTitleLabel">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>40</y>
+     <x>220</x>
+     <y>0</y>
      <width>1141</width>
-     <height>101</height>
+     <height>111</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Sitka Text</family>
-     <pointsize>40</pointsize>
+     <pointsize>23</pointsize>
      <bold>true</bold>
     </font>
    </property>
@@ -82,10 +94,10 @@ background:transparent;</string>
   <widget class="QLabel" name="descriptionLabel">
    <property name="geometry">
     <rect>
-     <x>431</x>
-     <y>131</y>
-     <width>341</width>
-     <height>41</height>
+     <x>671</x>
+     <y>110</y>
+     <width>237</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="font">
@@ -100,7 +112,7 @@ background:transparent;</string>
 background:transparent;</string>
    </property>
    <property name="text">
-    <string>Enter your new information:</string>
+    <string>Enter new information:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -109,11 +121,23 @@ background:transparent;</string>
   <widget class="QLineEdit" name="usernameEdit">
    <property name="geometry">
     <rect>
-     <x>432</x>
-     <y>225</y>
-     <width>341</width>
-     <height>39</height>
+     <x>671</x>
+     <y>193</y>
+     <width>238</width>
+     <height>32</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>32</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit{
@@ -122,7 +146,7 @@ background:transparent;</string>
     border-radius:10px;
     padding-left:10px;
     color:white;
-    font:15pt &quot;Segoe UI&quot;;
+    font:11pt &quot;Segoe UI&quot;;
 }
 
 QLineEdit:focus{
@@ -136,11 +160,23 @@ QLineEdit:focus{
   <widget class="QLineEdit" name="passwordEdit">
    <property name="geometry">
     <rect>
-     <x>432</x>
-     <y>384</y>
-     <width>341</width>
-     <height>39</height>
+     <x>670</x>
+     <y>332</y>
+     <width>238</width>
+     <height>32</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>32</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit{
@@ -149,7 +185,7 @@ QLineEdit:focus{
     border-radius:10px;
     padding-left:10px;
     color:white;
-    font:15pt &quot;Segoe UI&quot;;
+    font:11pt &quot;Segoe UI&quot;;
 }
 
 QLineEdit:focus{
@@ -166,11 +202,23 @@ QLineEdit:focus{
   <widget class="QLineEdit" name="confirmPasswordEdit">
    <property name="geometry">
     <rect>
-     <x>432</x>
-     <y>437</y>
-     <width>341</width>
-     <height>39</height>
+     <x>670</x>
+     <y>380</y>
+     <width>238</width>
+     <height>32</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>32</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit{
@@ -179,7 +227,7 @@ QLineEdit:focus{
     border-radius:10px;
     padding-left:10px;
     color:white;
-    font:15pt &quot;Segoe UI&quot;;
+    font:11pt &quot;Segoe UI&quot;;
 }
 
 QLineEdit:focus{
@@ -196,11 +244,23 @@ QLineEdit:focus{
   <widget class="QLineEdit" name="emailEdit">
    <property name="geometry">
     <rect>
-     <x>432</x>
-     <y>331</y>
-     <width>341</width>
-     <height>39</height>
+     <x>671</x>
+     <y>287</y>
+     <width>238</width>
+     <height>32</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>32</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit{
@@ -209,7 +269,7 @@ QLineEdit:focus{
     border-radius:10px;
     padding-left:10px;
     color:white;
-    font:15pt &quot;Segoe UI&quot;;
+    font:11pt &quot;Segoe UI&quot;;
 }
 
 QLineEdit:focus{
@@ -223,11 +283,23 @@ QLineEdit:focus{
   <widget class="QLineEdit" name="nameEdit">
    <property name="geometry">
     <rect>
-     <x>432</x>
-     <y>172</y>
-     <width>341</width>
-     <height>39</height>
+     <x>671</x>
+     <y>145</y>
+     <width>238</width>
+     <height>32</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>32</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit{
@@ -236,7 +308,7 @@ QLineEdit:focus{
     border-radius:10px;
     padding-left:10px;
     color:white;
-    font:15pt &quot;Segoe UI&quot;;
+    font:11pt &quot;Segoe UI&quot;;
 }
 
 QLineEdit:focus{
@@ -250,11 +322,23 @@ QLineEdit:focus{
   <widget class="QLineEdit" name="phoneEdit">
    <property name="geometry">
     <rect>
-     <x>432</x>
-     <y>278</y>
-     <width>341</width>
-     <height>39</height>
+     <x>671</x>
+     <y>239</y>
+     <width>238</width>
+     <height>32</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>32</height>
+    </size>
    </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit{
@@ -263,7 +347,7 @@ QLineEdit:focus{
     border-radius:10px;
     padding-left:10px;
     color:white;
-    font:15pt &quot;Segoe UI&quot;;
+    font:11pt &quot;Segoe UI&quot;;
 }
 
 QLineEdit:focus{
@@ -280,16 +364,16 @@ QLineEdit:focus{
   <widget class="QPushButton" name="saveButton">
    <property name="geometry">
     <rect>
-     <x>432</x>
-     <y>490</y>
-     <width>341</width>
-     <height>60</height>
+     <x>670</x>
+     <y>429</y>
+     <width>238</width>
+     <height>54</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
      <width>0</width>
-     <height>55</height>
+     <height>50</height>
     </size>
    </property>
    <property name="maximumSize">

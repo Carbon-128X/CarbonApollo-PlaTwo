@@ -3,6 +3,8 @@
 #include <QWidget>
 #include "gamewindow.h"
 #include "videobackgroundwidget.h"
+#include <QColor>
+#include <QVector>
 namespace Ui {
 class HostWindow;
 }
@@ -16,6 +18,7 @@ public:
     int getBoardSize() const;
     int getGameTime() const;
     bool hasTimer() const;
+    QColor hostColor() const;
 
 private slots:
     void on_timeLimitCheck_clicked(bool checked);
@@ -35,6 +38,9 @@ private:
     bool timerEnabled = false;
 
     VideoBackgroundWidget *videoBackground;
+
+    QVector<QColor> availableColors;
+    QColor selectedHostColor;
 protected:
     void resizeEvent(QResizeEvent *event) override;
 };

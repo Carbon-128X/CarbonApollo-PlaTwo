@@ -14,14 +14,14 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) , ui(new Ui::MainWindo
     videoBackground = new VideoBackgroundWidget(this);
     videoBackground->setGeometry(rect());
     videoBackground->lower();
-    videoBackground->setVideo(":/images/images/Background.mp4");
+    videoBackground->setVideo(":/images/images/300.mp4");
 
 
     selectedGame = None;
     ui->gameTitle->setText("Welcome, " + UserManager::currentUser.name + "!");
     ui->gameDescription->setText("Choose one of the games from the menu.");
-    QPixmap logo(":/images/images/capollo.jpg");
-    ui->gameImage->setPixmap(logo.scaled( ui->gameImage->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    //QPixmap logo(":/images/images/capollo.jpg");
+    //ui->gameImage->setPixmap(logo.scaled( ui->gameImage->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->gameImage->setAlignment(Qt::AlignCenter);
     ui->startGameButton->setEnabled(false);
 }

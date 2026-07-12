@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>700</height>
+    <width>1000</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1200</width>
-    <height>700</height>
+    <width>1000</width>
+    <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1200</width>
-    <height>700</height>
+    <width>1000</width>
+    <height>600</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -28,19 +28,210 @@
   <property name="styleSheet">
    <string notr="true">background-color:#101010;</string>
   </property>
+  <widget class="QFrame" name="previewFrame">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>20</y>
+     <width>290</width>
+     <height>560</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>290</width>
+     <height>560</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>290</width>
+     <height>560</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame{
+
+background:#002147;
+
+border-radius:18px;
+
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="gameImage">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>20</y>
+      <width>271</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+background:transparent;</string>
+    </property>
+    <property name="text">
+     <string>Game Image</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gameTitle">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>307</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka Text</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+background:transparent;</string>
+    </property>
+    <property name="text">
+     <string>Welcome to PLATWO</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gameDescription">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>271</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka Text</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+background:transparent;</string>
+    </property>
+    <property name="text">
+     <string>Choose one of the games from the menu.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="startGameButton">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>470</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+
+background:#2C3E50;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+min-height:50px;
+
+font-size:13pt;
+
+font-weight:bold;
+
+}
+
+QPushButton:hover{
+
+background:#3A86FF;
+
+}
+
+QPushButton:pressed{
+
+background:#2563EB;
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Start Game</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>-70</y>
+      <width>321</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/images/images/111.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>gameImage</zorder>
+   <zorder>gameTitle</zorder>
+   <zorder>gameDescription</zorder>
+   <zorder>startGameButton</zorder>
+  </widget>
   <widget class="QFrame" name="menuFrame">
    <property name="geometry">
     <rect>
-     <x>741</x>
-     <y>30</y>
-     <width>431</width>
-     <height>641</height>
+     <x>700</x>
+     <y>20</y>
+     <width>290</width>
+     <height>560</height>
     </rect>
    </property>
    <property name="maximumSize">
     <size>
-     <width>1200</width>
-     <height>700</height>
+     <width>290</width>
+     <height>560</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -62,20 +253,21 @@ border-radius:18px;
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>-20</y>
-      <width>411</width>
-      <height>241</height>
+      <y>30</y>
+      <width>271</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Sitka Text</family>
-      <pointsize>44</pointsize>
+      <pointsize>30</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#4EA8FF;</string>
+     <string notr="true">color:#4EA8FF;
+background:transparent;</string>
     </property>
     <property name="text">
      <string>PLATWO</string>
@@ -87,9 +279,9 @@ border-radius:18px;
    <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
-      <x>51</x>
-      <y>533</y>
-      <width>331</width>
+      <x>30</x>
+      <y>470</y>
+      <width>231</width>
       <height>61</height>
      </rect>
     </property>
@@ -102,11 +294,11 @@ color:white;
 
 border:none;
 
-border-radius:12px;
+border-radius:30px;
 
 min-height:50px;
 
-font-size:14pt;
+font-size:13pt;
 
 font-weight:bold;
 
@@ -131,9 +323,9 @@ background:#2563EB;
    <widget class="QPushButton" name="profileButton">
     <property name="geometry">
      <rect>
-      <x>51</x>
-      <y>445</y>
-      <width>331</width>
+      <x>31</x>
+      <y>395</y>
+      <width>231</width>
       <height>61</height>
      </rect>
     </property>
@@ -146,11 +338,11 @@ color:white;
 
 border:none;
 
-border-radius:12px;
+border-radius:30px;
 
 min-height:50px;
 
-font-size:14pt;
+font-size:13pt;
 
 font-weight:bold;
 
@@ -175,9 +367,9 @@ background:#2563EB;
    <widget class="QPushButton" name="boxesButton">
     <property name="geometry">
      <rect>
-      <x>51</x>
-      <y>181</y>
-      <width>331</width>
+      <x>31</x>
+      <y>161</y>
+      <width>231</width>
       <height>61</height>
      </rect>
     </property>
@@ -190,11 +382,11 @@ color:white;
 
 border:none;
 
-border-radius:12px;
+border-radius:30px;
 
 min-height:50px;
 
-font-size:14pt;
+font-size:13pt;
 
 font-weight:bold;
 
@@ -219,9 +411,9 @@ background:#2563EB;
    <widget class="QPushButton" name="fanoronaButton">
     <property name="geometry">
      <rect>
-      <x>51</x>
-      <y>357</y>
-      <width>331</width>
+      <x>31</x>
+      <y>317</y>
+      <width>231</width>
       <height>61</height>
      </rect>
     </property>
@@ -234,11 +426,11 @@ color:white;
 
 border:none;
 
-border-radius:12px;
+border-radius:30px;
 
 min-height:50px;
 
-font-size:14pt;
+font-size:13pt;
 
 font-weight:bold;
 
@@ -263,9 +455,9 @@ background:#2563EB;
    <widget class="QPushButton" name="morrisButton">
     <property name="geometry">
      <rect>
-      <x>51</x>
-      <y>269</y>
-      <width>331</width>
+      <x>31</x>
+      <y>239</y>
+      <width>231</width>
       <height>61</height>
      </rect>
     </property>
@@ -278,11 +470,11 @@ color:white;
 
 border:none;
 
-border-radius:12px;
+border-radius:30px;
 
 min-height:50px;
 
-font-size:14pt;
+font-size:13pt;
 
 font-weight:bold;
 
@@ -304,151 +496,42 @@ background:#2563EB;
      <string>Nine Men's Morris</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QFrame" name="previewFrame">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>31</y>
-     <width>649</width>
-     <height>639</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background:transparent;</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Shape::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Shadow::Raised</enum>
-   </property>
-   <widget class="QLabel" name="gameImage">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>611</width>
-      <height>391</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:#4EA8FF;</string>
-    </property>
-    <property name="text">
-     <string>Game Image</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="startGameButton">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>560</y>
-      <width>351</width>
-      <height>61</height>
+      <x>-10</x>
+      <y>-70</y>
+      <width>321</width>
+      <height>671</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-
-background:#2C3E50;
-
-color:white;
-
-border:none;
-
-border-radius:12px;
-
-min-height:50px;
-
-font-size:14pt;
-
-font-weight:bold;
-
-}
-
-QPushButton:hover{
-
-background:#3A86FF;
-
-}
-
-QPushButton:pressed{
-
-background:#2563EB;
-
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
-     <string>Start Game</string>
+     <string/>
     </property>
-   </widget>
-   <widget class="QLabel" name="gameTitle">
-    <property name="geometry">
-     <rect>
-      <x>11</x>
-      <y>431</y>
-      <width>631</width>
-      <height>27</height>
-     </rect>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/images/images/111.jpg</pixmap>
     </property>
-    <property name="font">
-     <font>
-      <family>Sitka Text</family>
-      <pointsize>12</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:#4EA8FF;</string>
-    </property>
-    <property name="text">
-     <string>Welcome to PLATWO</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="gameDescription">
-    <property name="geometry">
-     <rect>
-      <x>91</x>
-      <y>489</y>
-      <width>469</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Sitka Text</family>
-      <pointsize>12</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:#4EA8FF;</string>
-    </property>
-    <property name="text">
-     <string>Choose one of the games from the menu.</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
-    <property name="wordWrap">
+    <property name="scaledContents">
      <bool>true</bool>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
    </widget>
+   <zorder>label</zorder>
+   <zorder>titleLabel</zorder>
+   <zorder>exitButton</zorder>
+   <zorder>profileButton</zorder>
+   <zorder>boxesButton</zorder>
+   <zorder>fanoronaButton</zorder>
+   <zorder>morrisButton</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

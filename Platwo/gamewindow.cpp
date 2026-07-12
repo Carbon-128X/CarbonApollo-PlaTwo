@@ -16,7 +16,8 @@ GameWindow::GameWindow(GameType game, QWidget *parent): QWidget(parent), ui(new 
     videoBackground = new VideoBackgroundWidget(this);
     videoBackground->setGeometry(rect());
     videoBackground->lower();
-    videoBackground->setVideo(":/images/images/Background.mp4");
+    videoBackground->setVideo(":/images/images/87.png");
+
 
     ui->historyTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->historyTable->horizontalHeader()->setStretchLastSection(true);
@@ -38,15 +39,15 @@ void GameWindow::loadGameInformation() {
     switch(currentGame) {
     case Boxes:
         ui->gameTitleLabel->setText("Boxes and Dots");
-        ui->gameImageLabel->setPixmap( QPixmap(":/images/images/boxes.jpg").scaled( ui->gameImageLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        //ui->gameImageLabel->setPixmap( QPixmap(":/images/images/boxes.jpg").scaled( ui->gameImageLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
         break;
      case Morris:
         ui->gameTitleLabel->setText("Nine Men's Morris");
-         ui->gameImageLabel->setPixmap( QPixmap(":/images/images/morris.jpg").scaled( ui->gameImageLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        // ui->gameImageLabel->setPixmap( QPixmap(":/images/images/morris.jpg").scaled( ui->gameImageLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
         break;
      case Fanorona:
         ui->gameTitleLabel->setText("Fanorona");
-        ui->gameImageLabel->setPixmap(QPixmap(":/images/images/fanorona.jpg").scaled( ui->gameImageLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        //ui->gameImageLabel->setPixmap(QPixmap(":/images/images/fanorona.jpg").scaled( ui->gameImageLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
         break;
     }
 }
