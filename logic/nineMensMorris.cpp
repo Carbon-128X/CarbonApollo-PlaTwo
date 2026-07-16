@@ -139,3 +139,144 @@ vector<Move> NineMensMorris::movement(int player) const {      // legal moves bu
 
     return moves;
 }
+
+// ----------------------------------------- overrided methods of GameMediator -----------------------------------------
+
+string NineMensMorris::name() const {
+    return "Nine Men's Morris";
+}
+
+int NineMensMorris::currentPlayer() const {
+    return current_;
+}
+
+vector<Move> NineMensMorris::legalMoves() const {
+    vector<Move> moves;
+    if (isGameOver())
+        return moves;
+
+    if (awaitingRemoval_)
+    {
+        int opponent = otherPlayer(current_);
+        for (int pos = 0; pos < 24; pos++)
+            if (isRemovable(pos, opponent))
+                moves.push_back(Move{ -1, pos });
+        return moves;
+    }
+
+    if (inPlacingPhase(current_)) {
+        for (int pos = 0; pos < 24; pos++)
+            if (board_[pos] == 0)
+                moves.push_back(Move{ -1, pos });
+        return moves;
+    }
+
+    return movement(current_);      // moving / flying phase
+}
+
+bool NineMensMorris::applyMove(const Move& move) {
+    if (isGameOver())
+        return false;
+
+    if (awaitingRemoval_)
+    {
+        int opponent = otherPlayer(current_);
+        int target = move.to;
+
+        if (target < 0 || target >= 24)
+            return false;
+        
+        if (!isRemovable(target, opponent))
+            return false;
+
+        board_[target] = 0;
+        awaitingRemoval_ = false;
+        movesSinceRemoval_ = 0;      // reset for draw rule
+        current_ = otherPlayer(current_);
+        return true;
+    }
+
+    if (inPlacingPhase(current_))
+    {
+        int pos = move.to;
+
+        if (pos < 0 || pos >= 24)
+            return false;
+
+        if (board_[pos] != 0)
+            return false;
+
+
+        board_[pos] = current_;
+        toPlace_[current_]--;
+        
+        movesSinceRemoval_++;
+        
+        if (formsMill(pos, current_))
+        {
+            awaitingRemoval_ = true;      // same player should remove
+            return true;
+        }
+
+        current_ = otherPlayer(current_);      // passing the turn if player didn't made a mill
+        return true;
+    }
+
+    
+    // move or fly
+    if (move.from < 0 || move.from >= 24 || move.to < 0 || move.to >= 24)
+        return false;
+
+    if (board_[move.from] != current_)
+        return false;
+
+    if (board_[move.to] != 0)
+        return false;
+
+    if (!canFly(current_) && !areNeighbours(move.from, move.to))
+        return false;
+
+    board_[move.from] = 0;
+    board_[move.to] = current_;
+    movesSinceRemoval_++;
+
+    if (formsMill(move.to, current_))
+    {
+        awaitingRemoval_ = true;
+        return true;
+    }
+
+    current_ = otherPlayer(current_);
+    return true;
+}
+
+bool NineMensMorris::isGameOver() const {
+    return winner() != -1;
+}
+
+int NineMensMorris::winner() const {
+    int loser = 0;
+
+    if (!inPlacingPhase(1) && countPieces(1) < 3)
+        loser = 1;
+
+    else if (!inPlacingPhase(2) && countPieces(2) < 3)
+        loser = 2;
+
+    else if (!inPlacingPhase(current_) && !awaitingRemoval_ && countPieces(current_) >= 3 && movement(current_).empty())
+        loser = current_;      // if the current player had no legal moves
+
+    if (loser != 0)
+        return otherPlayer(loser);      // the other player wins
+
+    if (!awaitingRemoval_ && (movesSinceRemoval_ >= DRAW_LIMIT))
+        return 0;      // draw
+    
+    return -1;      // game is not over yet
+}
+
+int NineMensMorris::score(int player) const {
+    if (player == 1 || player == 2)
+        return countPieces(player);
+    return 0; // for invalid input
+}
