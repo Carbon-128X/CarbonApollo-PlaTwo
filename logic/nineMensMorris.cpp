@@ -280,3 +280,37 @@ int NineMensMorris::score(int player) const {
         return countPieces(player);
     return 0; // for invalid input
 }
+
+
+// ----------------------------------------- read access + save/load -----------------------------------------
+
+int NineMensMorris::posStatus(int pos) const {
+    if (pos < 0 || pos >= 24)
+        return -1;
+    return board_[pos];
+}
+
+int NineMensMorris::notPlaced(int player) const {
+    if (player == 1 || player == 2)
+        return toPlace_[player];
+    return 0;
+}
+
+bool NineMensMorris::mustRemove() const {
+    return awaitingRemoval_;
+}
+
+
+void NineMensMorris::loadState(const vector<int>& board, int current, int toPlace1, int toPlace2,
+    bool awaitingRemoval, int movesSinceRemoval) {
+
+    for (int i = 0; i < 24; i++)
+        board_[i] = board[i];
+    
+    current_ = current;
+    toPlace_[0] = 0;
+    toPlace_[1] = toPlace1;
+    toPlace_[2] = toPlace2;
+    awaitingRemoval_ = awaitingRemoval;
+    movesSinceRemoval_ = movesSinceRemoval;
+}
