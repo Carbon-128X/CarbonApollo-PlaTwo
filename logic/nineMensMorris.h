@@ -13,6 +13,7 @@ private:
     int current_;            // player's turn(1 or 2)
     int toPlace_[3];         // left pieces to place in the board for each player (index 1->player1 , 2->player2)    (index 0 is unused)
     bool awaitingRemoval_;   // a flag that becomes true after current player made a mill and should remove one of other player's piece
+    int movesSinceRemoval_;  // counter used by the draw rule
 
     // ----------------------------------------- helper funcs -----------------------------------------
     int otherPlayer(int player) const;

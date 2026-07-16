@@ -36,3 +36,6 @@ const vector<vector<int>> POS_NEIGHBORS = {      // neighbors of each position
     {21,23},      // 22
     {22,16,15}    // 23
 };
+
+// If 100 moves passed with no piece removed, the game is draw.
+static const int DRAW_LIMIT = 100;
