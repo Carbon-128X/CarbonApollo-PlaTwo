@@ -49,7 +49,7 @@ GuestWindow::GuestWindow(GameWindow::GameType game, QWidget *parent) : QWidget(p
     videoBackground = new VideoBackgroundWidget(this);
     videoBackground->setGeometry(rect());
     videoBackground->lower();
-    videoBackground->setVideo(":/images/images/1111.png");
+    videoBackground->setVideo(":/images/images/1111.png ");
 
     initializeWindow();
 
@@ -72,7 +72,6 @@ void GuestWindow::initializeWindow() {
     ui->portEdit->setPlaceholderText("5000");
     ui->portEdit->setValidator( new QIntValidator(1024,65535,this));
 }
-
 bool GuestWindow::validateInput() {
     if(ui->ipEdit->text().trimmed().isEmpty()) {
         ui->statusLabel->show();

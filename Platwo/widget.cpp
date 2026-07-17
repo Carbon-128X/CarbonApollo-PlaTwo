@@ -90,6 +90,7 @@ void Widget::startLogoAnimation() {
 void Widget::resizeEvent(QResizeEvent *event) {
     QWidget::resizeEvent(event);
 
-    if(videoBackground)
+    if(videoBackground){
         videoBackground->setGeometry(rect());
+    }
 }

@@ -32,21 +32,30 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>-20</y>
+     <y>60</y>
      <width>1171</width>
      <height>141</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sitka Text</family>
-     <pointsize>40</pointsize>
+     <family>Kristen ITC</family>
+     <pointsize>27</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#56CCF2;
-background:transparent;</string>
+    <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #61D8FF,
+        stop:0.35 #2CB8FF,
+        stop:0.7 #008BFF,
+        stop:1 #0047C7
+    );
+    background: transparent;
+}</string>
    </property>
    <property name="text">
     <string>LOGIN</string>
@@ -59,9 +68,9 @@ background:transparent;</string>
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>305</y>
-     <width>261</width>
-     <height>50</height>
+     <y>350</y>
+     <width>251</width>
+     <height>48</height>
     </rect>
    </property>
    <property name="maximumSize">
@@ -72,40 +81,37 @@ background:transparent;</string>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI</family>
+     <family>Times New Roman</family>
      <pointsize>14</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
+    <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:12px;
-
-min-height:50px;
-
-font-size:14pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
    </property>
@@ -122,36 +128,45 @@ background:#2563EB;
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>420</y>
-     <width>181</width>
-     <height>41</height>
+     <x>670</x>
+     <y>405</y>
+     <width>251</width>
+     <height>48</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI</family>
-     <pointsize>12</pointsize>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
      <italic>false</italic>
-     <bold>false</bold>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
+    <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2F80ED;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border-radius:12px;
-
-font:12pt &quot;Segoe UI&quot;;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#56CCF2;
+background:#2C3E50;
+}
+
+QPushButton:pressed{
+
+background:#0284e8;
 
 }</string>
    </property>
@@ -162,30 +177,32 @@ background:#56CCF2;
   <widget class="QPushButton" name="forgotPasswordButton">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>370</y>
-     <width>181</width>
-     <height>41</height>
+     <x>809</x>
+     <y>319</y>
+     <width>111</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI</family>
-     <pointsize>12</pointsize>
+     <family>Times New Roman</family>
+     <pointsize>11</pointsize>
      <italic>false</italic>
      <bold>false</bold>
+     <underline>true</underline>
+     <strikeout>false</strikeout>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
 
-background:#2F80ED;
+background:transparent;
 
 color:white;
 
 border-radius:12px;
 
-font:12pt &quot;Segoe UI&quot;;
+
 
 }
 
@@ -203,9 +220,9 @@ background:#56CCF2;
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>224</y>
-     <width>261</width>
-     <height>35</height>
+     <y>278</y>
+     <width>251</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="maximumSize">
@@ -214,21 +231,26 @@ background:#56CCF2;
      <height>200</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit{
+    background:transparent;
+    border:2px solid #2F80ED;
+    border-radius:8px;
+    padding-left:5px;
+    color:white;
+    
+}
 
-background:#2B2B2B;
-
-border:2px solid #2F80ED;
-
-border-radius:10px;
-
-padding-left:10px;
-
-color:white;
-
-font:12pt &quot;Segoe UI&quot;;
-
+QLineEdit:focus{
+    border:2px solid #56CCF2;
 }</string>
    </property>
    <property name="text">
@@ -238,16 +260,16 @@ font:12pt &quot;Segoe UI&quot;;
     <enum>QLineEdit::EchoMode::Password</enum>
    </property>
    <property name="placeholderText">
-    <string>Password</string>
+    <string>🔒</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="rememberCheckBox">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>260</y>
-     <width>125</width>
-     <height>51</height>
+     <x>668</x>
+     <y>315</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="maximumSize">
@@ -255,6 +277,12 @@ font:12pt &quot;Segoe UI&quot;;
      <width>16777215</width>
      <height>200</height>
     </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
@@ -268,7 +296,7 @@ background:transparent;</string>
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>105</y>
+     <y>174</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -281,8 +309,17 @@ background:transparent;</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;
-background:transparent;</string>
+    <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
    </property>
    <property name="text">
     <string>Username:</string>
@@ -292,7 +329,7 @@ background:transparent;</string>
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>190</y>
+     <y>247</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -305,8 +342,17 @@ background:transparent;</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;
-background:transparent;</string>
+    <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
    </property>
    <property name="text">
     <string>Password:</string>
@@ -316,9 +362,9 @@ background:transparent;</string>
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>140</y>
-     <width>261</width>
-     <height>35</height>
+     <y>206</y>
+     <width>251</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="maximumSize">
@@ -327,28 +373,33 @@ background:transparent;</string>
      <height>200</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">QLineEdit{
+    background:transparent;
+    border:2px solid #2F80ED;
+    border-radius:8px;
+    padding-left:5px;
+    color:white;
+    
+}
 
-background:#2B2B2B;
-
-border:2px solid #2F80ED;
-
-border-radius:10px;
-
-padding-left:10px;
-
-color:white;
-
-font:12pt &quot;Segoe UI&quot;;
-
+QLineEdit:focus{
+    border:2px solid #56CCF2;
 }</string>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="placeholderText">
-    <string>Enter Username</string>
+    <string>👤</string>
    </property>
   </widget>
   <zorder>rememberCheckBox</zorder>

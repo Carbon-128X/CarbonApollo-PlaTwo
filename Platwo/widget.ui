@@ -32,9 +32,9 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>425</y>
+     <y>445</y>
      <width>721</width>
-     <height>191</height>
+     <height>171</height>
     </rect>
    </property>
    <property name="font">
@@ -46,7 +46,14 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#2c0ac6;
+    <string notr="true">color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #61D8FF,
+        stop:0.35 #2CB8FF,
+        stop:0.7 #008BFF,
+        stop:1 #0047C7
+    );
 letter-spacing:2px;
 background:transparent;</string>
    </property>
@@ -116,24 +123,32 @@ border-radius:5px;
    </property>
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>190</x>
      <y>105</y>
-     <width>128</width>
+     <width>211</width>
      <height>411</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sitka Text</family>
+     <family>Kristen ITC</family>
      <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#696969;
-letter-spacing:2px;
-background:transparent;</string>
+    <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #61D8FF,
+        stop:0.35 #2CB8FF,
+        stop:0.7 #008BFF,
+        stop:1 #0047C7
+    );
+    background: transparent;
+}</string>
    </property>
    <property name="text">
     <string>L</string>
@@ -148,24 +163,32 @@ background:transparent;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>420</x>
      <y>105</y>
-     <width>147</width>
+     <width>231</width>
      <height>411</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sitka Text</family>
+     <family>Kristen ITC</family>
      <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#696969;
-letter-spacing:2px;
-background:transparent;</string>
+    <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #61D8FF,
+        stop:0.35 #2CB8FF,
+        stop:0.7 #008BFF,
+        stop:1 #0047C7
+    );
+    background: transparent;
+}</string>
    </property>
    <property name="text">
     <string>T</string>
@@ -180,24 +203,32 @@ background:transparent;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>720</x>
+     <x>710</x>
      <y>105</y>
-     <width>190</width>
+     <width>211</width>
      <height>411</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sitka Text</family>
+     <family>Kristen ITC</family>
      <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#696969;
-letter-spacing:2px;
-background:transparent;</string>
+    <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #61D8FF,
+        stop:0.35 #2CB8FF,
+        stop:0.7 #008BFF,
+        stop:1 #0047C7
+    );
+    background: transparent;
+}</string>
    </property>
    <property name="text">
     <string>O</string>
@@ -223,15 +254,14 @@ background:transparent;</string>
    </property>
    <property name="font">
     <font>
-     <family>Sitka Text</family>
+     <family>Kristen ITC</family>
      <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#000000;
-letter-spacing:2px;
+    <string notr="true">color:#0a34ca;
 background:transparent;</string>
    </property>
    <property name="text">
@@ -247,23 +277,22 @@ background:transparent;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>265</x>
      <y>105</y>
-     <width>171</width>
+     <width>261</width>
      <height>411</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sitka Text</family>
+     <family>Kristen ITC</family>
      <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#000000;
-letter-spacing:2px;
+    <string notr="true">color:#0a34ca;
 background:transparent;</string>
    </property>
    <property name="text">
@@ -279,15 +308,15 @@ background:transparent;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>70</x>
      <y>105</y>
-     <width>154</width>
+     <width>221</width>
      <height>411</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sitka Text</family>
+     <family>Kristen ITC</family>
      <pointsize>140</pointsize>
      <italic>false</italic>
      <bold>true</bold>
@@ -296,8 +325,7 @@ background:transparent;</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#000000;
-letter-spacing:2px;
+    <string notr="true">color:#0a34ca;
 background:transparent;</string>
    </property>
    <property name="text">

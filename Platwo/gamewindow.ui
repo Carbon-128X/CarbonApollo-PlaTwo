@@ -16,6 +16,11 @@
     <height>700</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <kerning>true</kerning>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -72,8 +77,8 @@ QGroupBox::title{
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>-1</pointsize>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -81,7 +86,7 @@ QGroupBox::title{
      <string notr="true">QRadioButton
 {
     color: white;
-    font-size:20px;
+   
     font-weight:bold;
 
     spacing:10px;
@@ -117,8 +122,8 @@ QRadioButton::indicator:checked
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>-1</pointsize>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -126,13 +131,14 @@ QRadioButton::indicator:checked
      <string notr="true">QRadioButton
 {
     color: white;
-    font-size:20px;
+   
     font-weight:bold;
 
     spacing:10px;
 
     background:transparent;
 }
+
 QRadioButton::indicator:unchecked
 {
     border:2px solid #4EA3FF;
@@ -162,15 +168,23 @@ QRadioButton::indicator:checked
    </property>
    <property name="font">
     <font>
-     <family>Sitka Text</family>
-     <pointsize>15</pointsize>
+     <family>Kristen ITC</family>
+     <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;
-
-background:transparent;</string>
+    <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
    </property>
    <property name="text">
     <string>Game History</string>
@@ -185,11 +199,12 @@ background:transparent;</string>
      <x>360</x>
      <y>90</y>
      <width>621</width>
-     <height>281</height>
+     <height>251</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Times New Roman</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
@@ -397,39 +412,49 @@ border:none;
    <property name="geometry">
     <rect>
      <x>510</x>
-     <y>470</y>
+     <y>475</y>
      <width>311</width>
-     <height>51</height>
+     <height>45</height>
     </rect>
    </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
+    <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:12px;
-
-min-height:50px;
-
-font-size:14pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
    </property>
@@ -440,42 +465,51 @@ background:#2563EB;
   <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>570</x>
+     <x>510</x>
      <y>530</y>
-     <width>191</width>
-     <height>41</height>
+     <width>311</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="maximumSize">
     <size>
      <width>1000</width>
-     <height>600</height>
+     <height>500</height>
     </size>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI</family>
-     <pointsize>12</pointsize>
+     <family>Times New Roman</family>
+     <pointsize>13</pointsize>
      <italic>false</italic>
-     <bold>false</bold>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
+    <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2F80ED;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border-radius:12px;
-
-font:12pt &quot;Segoe UI&quot;;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#56CCF2;
+background:#2C3E50;
+}
+
+QPushButton:pressed{
+
+background:#0284e8;
 
 }</string>
    </property>
@@ -486,17 +520,17 @@ background:#56CCF2;
   <widget class="QLabel" name="gameTitleLabel">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>330</y>
-     <width>281</width>
-     <height>91</height>
+     <x>30</x>
+     <y>340</y>
+     <width>301</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sitka Text</family>
-     <pointsize>20</pointsize>
-     <italic>true</italic>
+     <family>Kristen ITC</family>
+     <pointsize>21</pointsize>
+     <italic>false</italic>
      <bold>true</bold>
      <underline>false</underline>
      <strikeout>false</strikeout>
@@ -505,10 +539,7 @@ background:#56CCF2;
    </property>
    <property name="styleSheet">
     <string notr="true">color:#2c0ac6;
-letter-spacing:2px;
-background:transparent;
-
-</string>
+background:transparent;</string>
    </property>
    <property name="text">
     <string>Boxes and Dots</string>
@@ -517,38 +548,7 @@ background:transparent;
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="backgroundLabel">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1001</width>
-     <height>591</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="resources.qrc">:/images/images/87.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
-   </property>
-  </widget>
-  <zorder>backgroundLabel</zorder>
-  <zorder>connectionGroupBox</zorder>
-  <zorder>historyTitleLabel</zorder>
-  <zorder>historyTable</zorder>
-  <zorder>startGameButton</zorder>
-  <zorder>backButton</zorder>
-  <zorder>gameTitleLabel</zorder>
  </widget>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

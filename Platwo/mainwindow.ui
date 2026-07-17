@@ -54,7 +54,8 @@
 
 background:#002147;
 
-border-radius:18px;
+border-radius:30px;
+
 
 }</string>
    </property>
@@ -67,21 +68,31 @@ border-radius:18px;
    <widget class="QLabel" name="gameImage">
     <property name="geometry">
      <rect>
-      <x>8</x>
-      <y>20</y>
+      <x>10</x>
+      <y>10</y>
       <width>271</width>
       <height>281</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Kristen ITC</family>
+      <pointsize>11</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:white;
-background:transparent;</string>
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>Game Image</string>
@@ -101,14 +112,23 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>12</pointsize>
+      <family>Kristen ITC</family>
+      <pointsize>11</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:white;
-background:transparent;</string>
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>Welcome to PLATWO</string>
@@ -128,14 +148,23 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>12</pointsize>
+      <family>Kristen ITC</family>
+      <pointsize>11</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:white;
-background:transparent;</string>
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>Choose one of the games from the menu.</string>
@@ -156,34 +185,38 @@ background:transparent;</string>
       <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:30px;
-
-min-height:50px;
-
-font-size:13pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
     </property>
@@ -195,7 +228,7 @@ background:#2563EB;
     <property name="geometry">
      <rect>
       <x>-20</x>
-      <y>-70</y>
+      <y>-50</y>
       <width>321</width>
       <height>671</height>
      </rect>
@@ -239,7 +272,8 @@ background:#2563EB;
 
 background:#002147;
 
-border-radius:18px;
+border-radius:30px;
+
 
 }</string>
    </property>
@@ -260,14 +294,24 @@ border-radius:18px;
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
+      <family>Kristen ITC</family>
       <pointsize>30</pointsize>
+      <italic>false</italic>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#4EA8FF;
-background:transparent;</string>
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #61D8FF,
+        stop:0.35 #2CB8FF,
+        stop:0.7 #008BFF,
+        stop:1 #0047C7
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>PLATWO</string>
@@ -285,34 +329,38 @@ background:transparent;</string>
       <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:30px;
-
-min-height:50px;
-
-font-size:13pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
     </property>
@@ -329,34 +377,38 @@ background:#2563EB;
       <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:30px;
-
-min-height:50px;
-
-font-size:13pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
     </property>
@@ -373,34 +425,38 @@ background:#2563EB;
       <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:30px;
-
-min-height:50px;
-
-font-size:13pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
     </property>
@@ -417,34 +473,38 @@ background:#2563EB;
       <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:30px;
-
-min-height:50px;
-
-font-size:13pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
     </property>
@@ -461,34 +521,38 @@ background:#2563EB;
       <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:30px;
-
-min-height:50px;
-
-font-size:13pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
     </property>
@@ -500,13 +564,14 @@ background:#2563EB;
     <property name="geometry">
      <rect>
       <x>-10</x>
-      <y>-70</y>
+      <y>-50</y>
       <width>321</width>
       <height>671</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">border-radius:30px;
+</string>
     </property>
     <property name="text">
      <string/>

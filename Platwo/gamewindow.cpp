@@ -16,7 +16,7 @@ GameWindow::GameWindow(GameType game, QWidget *parent): QWidget(parent), ui(new 
     videoBackground = new VideoBackgroundWidget(this);
     videoBackground->setGeometry(rect());
     videoBackground->lower();
-    videoBackground->setVideo(":/images/images/87.png");
+    videoBackground->setVideo(":/images/images/0011.mp4");
 
 
     ui->historyTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);

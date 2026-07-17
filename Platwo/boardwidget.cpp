@@ -168,7 +168,7 @@ void BoardWidget::paintEvent(QPaintEvent *) {
     }
     // Draw Dots
     painter.setPen(Qt::NoPen);
-    painter.setBrush(Qt::white);
+    painter.setBrush(Qt::black);
     for(const QPoint &p : dots) {
         painter.drawEllipse(p,6,6);
     }

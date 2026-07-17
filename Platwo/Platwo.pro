@@ -11,6 +11,7 @@ SOURCES += \
     boxesboardwindow.cpp \
     custommessagebox.cpp \
     editprofilewindow.cpp \
+    fanaronaboardwindow.cpp \
     filemanager.cpp \
     forgotpasswordwindow.cpp \
     gamehistory.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
     loginwindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    morrisboardwindow.cpp \
     security.cpp \
     signupwindow.cpp \
     user.cpp \
@@ -35,6 +37,7 @@ HEADERS += \
     boxesboardwindow.h \
     custommessagebox.h \
     editprofilewindow.h \
+    fanaronaboardwindow.h \
     filemanager.h \
     forgotpasswordwindow.h \
     gamehistory.h \
@@ -46,6 +49,7 @@ HEADERS += \
     logic/move.h \
     loginwindow.h \
     mainwindow.h \
+    morrisboardwindow.h \
     security.h \
     signupwindow.h \
     user.h \
@@ -57,12 +61,14 @@ HEADERS += \
 FORMS += \
     boxesboardwindow.ui \
     editprofilewindow.ui \
+    fanaronaboardwindow.ui \
     forgotpasswordwindow.ui \
     gamewindow.ui \
     guestwindow.ui \
     hostwindow.ui \
     loginwindow.ui \
     mainwindow.ui \
+    morrisboardwindow.ui \
     signupwindow.ui \
     welcomewindow.ui \
     widget.ui

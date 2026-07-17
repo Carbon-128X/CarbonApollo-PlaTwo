@@ -56,9 +56,9 @@
   <widget class="QWidget" name="infoWidget" native="true">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>53</x>
      <y>70</y>
-     <width>191</width>
+     <width>211</width>
      <height>451</height>
     </rect>
    </property>
@@ -78,7 +78,7 @@ border:none;</string>
     <property name="font">
      <font>
       <family>Sitka Text</family>
-      <pointsize>13</pointsize>
+      <pointsize>15</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -102,7 +102,7 @@ background:transparent;</string>
     <property name="font">
      <font>
       <family>Sitka Text</family>
-      <pointsize>13</pointsize>
+      <pointsize>15</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -125,8 +125,8 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>11</pointsize>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -142,16 +142,16 @@ background:transparent;</string>
    <widget class="QLabel" name="player1ColorLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>-90</y>
-      <width>201</width>
+      <x>13</x>
+      <y>-91</y>
+      <width>231</width>
       <height>251</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Sitka Text</family>
-      <pointsize>11</pointsize>
+      <pointsize>12</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -161,7 +161,7 @@ background:transparent;</string>
 background:transparent;</string>
     </property>
     <property name="text">
-     <string>꧁                     ꧂</string>
+     <string>꧁                    ꧂</string>
     </property>
    </widget>
    <widget class="QLabel" name="player1ScoreLabel">
@@ -175,8 +175,8 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>11</pointsize>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -194,14 +194,14 @@ background:transparent;</string>
      <rect>
       <x>45</x>
       <y>60</y>
-      <width>101</width>
+      <width>141</width>
       <height>271</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>11</pointsize>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -217,16 +217,16 @@ background:transparent;</string>
    <widget class="QLabel" name="player2ColorLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>13</x>
       <y>30</y>
-      <width>211</width>
+      <width>231</width>
       <height>241</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Sitka Text</family>
-      <pointsize>11</pointsize>
+      <pointsize>12</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -236,7 +236,7 @@ background:transparent;</string>
 background:transparent;</string>
     </property>
     <property name="text">
-     <string>꧁                     ꧂</string>
+     <string>꧁                    ꧂    </string>
     </property>
    </widget>
    <widget class="QLabel" name="player2ScoreLabel">
@@ -250,8 +250,8 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>11</pointsize>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -267,7 +267,7 @@ background:transparent;</string>
    <widget class="QPushButton" name="saveButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>25</x>
       <y>268</y>
       <width>141</width>
       <height>45</height>
@@ -311,7 +311,7 @@ background:#2563EB;
    <widget class="QPushButton" name="restartButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>25</x>
       <y>320</y>
       <width>141</width>
       <height>45</height>
@@ -355,7 +355,7 @@ background:#2563EB;
    <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>25</x>
       <y>371</y>
       <width>141</width>
       <height>45</height>
