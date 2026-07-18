@@ -124,13 +124,15 @@ vector<Move> NineMensMorris::movement(int player) const {      // legal moves bu
             continue;
 
         if (fly)
+        {
             for (int to = 0; to < 24; to++)
                 if (board_[to] == 0)
                     moves.push_back(Move{ from, to });
-        else 
+        }
+        else
         {
             const vector<int>& neighbor = POS_NEIGHBORS[from];
-            
+
             for (int i = 0; i < (int)neighbor.size(); i++)
                 if (board_[neighbor[i]] == 0)
                     moves.push_back(Move{ from, neighbor[i] });
