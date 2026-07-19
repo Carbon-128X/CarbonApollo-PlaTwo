@@ -6,7 +6,7 @@
 #include <QPixmap>
 #include <QPainter>
 #include <QIcon>
-
+#include "custommessagebox.h"
 HostWindow::HostWindow(GameWindow::GameType game, QWidget *parent): QWidget(parent),ui(new Ui::HostWindow),currentGame(game){
     ui->setupUi(this);
 
@@ -53,8 +53,7 @@ HostWindow::HostWindow(GameWindow::GameType game, QWidget *parent): QWidget(pare
     videoBackground->setVideo(":/images/images/1111.png");
 
     initializeWindow();
-
-
+    server = new NetworkServer(this);
     selectedHostColor = availableColors[0];
 
     connect(ui->colorComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this,[=](int index){
@@ -80,7 +79,9 @@ void HostWindow::initializeWindow() {
         ui->boardSizeCombo->hide();
     }
     ui->ipValueLabel->setText("--------");
+
 }
+
 
 bool HostWindow::validateInput() {
     if(ui->portEdit->text().trimmed().isEmpty()) {
@@ -113,6 +114,18 @@ void HostWindow::on_createRoomButton_clicked() {
     if(!validateInput()){
         return;
     }
+
+    quint16 port = ui->portEdit->text().toUShort();
+    if(!server->startServer(port)) {
+        CustomMessageBox::warning( this, "Server Error", "Cannot start server on this port." );
+        return;
+    }
+
+    ui->statusLabel->show();
+    ui->statusLabel->setText("Waiting for player...");
+
+    ui->ipValueLabel->setText(getLocalIP());
+
     //اندازه زمین گیم
     int boardSize = 6;
 
@@ -128,9 +141,11 @@ void HostWindow::on_createRoomButton_clicked() {
         gameTime = ui->timeEdit->text().toInt();
     }
     //-----------------------------------
+    /*
     BoxesBoardWindow *board = new BoxesBoardWindow( boardSize, timerEnabled, gameTime, "HostUser","GuestUser", selectedHostColor,Qt::red );
     board->show();
     this->close();
+    */
 
 }
 
