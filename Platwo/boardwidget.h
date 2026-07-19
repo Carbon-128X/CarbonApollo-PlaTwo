@@ -18,9 +18,11 @@ public:
     void setPlayerColors(const QColor& c1, const QColor& c2);
     void setPlayers( const QString &p1Name, const QString &p2Name, const QColor &p1Color, const QColor &p2Color );
 
+    void applyRemoteMove(const Move &move);
+    void setMyTurn(bool value);
 signals:
     void boardChanged();
-
+    void moveSelected(const Move &move);
 protected:
     void paintEvent(QPaintEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
@@ -50,7 +52,7 @@ private:
     bool areNeighbours(int a,int b) const;
     QPoint pointFromIndex(int index) const;
 
-
+    bool myTurn = true;
 };
 
 #endif

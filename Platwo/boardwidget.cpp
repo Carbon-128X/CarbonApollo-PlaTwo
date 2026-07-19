@@ -49,6 +49,22 @@ void BoardWidget::setPlayers(
     update();
 }
 
+void BoardWidget::setMyTurn(bool value) {
+    myTurn = value;
+}
+
+void BoardWidget::applyRemoteMove(const Move &move) {
+    if(game == nullptr){
+        return;
+    }
+
+    if(game->applyMove(move)) {
+        emit boardChanged();
+    }
+
+    update();
+}
+
 void BoardWidget::setPlayers(const QString &p1, const QString &p2){
     player1Name = p1;
     player2Name = p2;
@@ -206,6 +222,11 @@ void BoardWidget::mousePressEvent(QMouseEvent *event) {
     if(game==nullptr){
         return;
     }
+
+    if(!myTurn) {
+        return;
+    }
+
     int index=nearestDot(event->pos());
     if(index==-1){
         return;
@@ -223,6 +244,9 @@ void BoardWidget::mousePressEvent(QMouseEvent *event) {
         Move move;
         move.from=first;
         move.to=index;
+
+        emit moveSelected(move);
+
         if(game->applyMove(move)) {
             emit boardChanged();
         }
