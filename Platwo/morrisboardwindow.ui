@@ -201,14 +201,23 @@ border:none;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>15</pointsize>
+      <family>Kristen ITC</family>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#56CCF2;
-background:transparent;</string>
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #61D8FF,
+        stop:0.35 #2CB8FF,
+        stop:0.7 #008BFF,
+        stop:1 #0047C7
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>PLAYER 1</string>
@@ -225,14 +234,23 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>15</pointsize>
+      <family>Kristen ITC</family>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#56CCF2;
-background:transparent;</string>
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #61D8FF,
+        stop:0.35 #2CB8FF,
+        stop:0.7 #008BFF,
+        stop:1 #0047C7
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>PLAYER 2</string>
@@ -249,15 +267,23 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>13</pointsize>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#A0A0A0;
-
-background:transparent;</string>
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>Username</string>
@@ -268,33 +294,8 @@ background:transparent;</string>
      <rect>
       <x>13</x>
       <y>-91</y>
-      <width>231</width>
+      <width>191</width>
       <height>251</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Sitka Text</family>
-      <pointsize>12</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:#A0A0A0;
-
-background:transparent;</string>
-    </property>
-    <property name="text">
-     <string>꧁                    ꧂</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="player1ScoreLabel">
-    <property name="geometry">
-     <rect>
-      <x>48</x>
-      <y>-50</y>
-      <width>111</width>
-      <height>331</height>
      </rect>
     </property>
     <property name="font">
@@ -308,6 +309,39 @@ background:transparent;</string>
      <string notr="true">color:#A0A0A0;
 
 background:transparent;</string>
+    </property>
+    <property name="text">
+     <string>꧁                  ꧂</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="player1ScoreLabel">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>-50</y>
+      <width>111</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>Score : 0</string>
@@ -324,15 +358,23 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>13</pointsize>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#A0A0A0;
-
-background:transparent;</string>
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>Username</string>
@@ -350,7 +392,7 @@ background:transparent;</string>
     <property name="font">
      <font>
       <family>Sitka Text</family>
-      <pointsize>12</pointsize>
+      <pointsize>13</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -360,13 +402,13 @@ background:transparent;</string>
 background:transparent;</string>
     </property>
     <property name="text">
-     <string>꧁                    ꧂    </string>
+     <string>꧁                 ꧂    </string>
     </property>
    </widget>
    <widget class="QLabel" name="player2ScoreLabel">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>45</x>
       <y>80</y>
       <width>151</width>
       <height>301</height>
@@ -374,15 +416,23 @@ background:transparent;</string>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Text</family>
-      <pointsize>13</pointsize>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#A0A0A0;
-
-background:transparent;</string>
+     <string notr="true">QLabel{
+    color: qlineargradient(
+        x1:0, y1:0,
+        x2:1, y2:1,
+        stop:0 #FFFFFF,
+        stop:0.35 #E8FFFF,
+        stop:0.65 #8EEBFF,
+        stop:1 #35BFFF
+    );
+    background: transparent;
+}</string>
     </property>
     <property name="text">
      <string>Score : 0</string>
@@ -394,37 +444,41 @@ background:transparent;</string>
       <x>25</x>
       <y>268</y>
       <width>141</width>
-      <height>45</height>
+      <height>46</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Sitka Text</family>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:12px;
-
-min-height:40px;
-
-font-size:14pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
     </property>
@@ -438,37 +492,41 @@ background:#2563EB;
       <x>25</x>
       <y>320</y>
       <width>141</width>
-      <height>45</height>
+      <height>46</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Sitka Text</family>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:12px;
-
-min-height:40px;
-
-font-size:14pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
     </property>
@@ -482,37 +540,41 @@ background:#2563EB;
       <x>25</x>
       <y>371</y>
       <width>141</width>
-      <height>45</height>
+      <height>46</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Sitka Text</family>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
+     <string notr="true">QPushButton
+{
+    color:white;
 
-background:#2C3E50;
+    background-color:qlineargradient(
+        x1:0,y1:0,
+        x2:0,y2:1,
+        stop:0 #2B7FFF,
+        stop:1 #0050C8
+    );
 
-color:white;
+    border:2px solid #63D8FF;
 
-border:none;
-
-border-radius:12px;
-
-min-height:40px;
-
-font-size:14pt;
-
-font-weight:bold;
-
+    border-radius:18px;
 }
 
 QPushButton:hover{
 
-background:#3A86FF;
-
+background:#2C3E50;
 }
 
 QPushButton:pressed{
 
-background:#2563EB;
+background:#0284e8;
 
 }</string>
     </property>

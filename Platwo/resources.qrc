@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/images">
-        <file>images/boxes.jpg</file>
         <file>images/fanorona.jpg</file>
         <file>images/morris.jpg</file>
         <file>images/capollo.jpg</file>
@@ -18,5 +17,6 @@
         <file>images/0011.mp4</file>
         <file>images/0066.mp4</file>
         <file>images/Screenshot 2026-07-11 151340.png</file>
+        <file>images/boxes.jpg</file>
     </qresource>
 </RCC>
