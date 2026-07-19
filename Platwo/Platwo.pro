@@ -1,5 +1,6 @@
 QT += widgets
 QT += multimedia multimediawidgets
+QT += network
 CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -23,6 +24,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     morrisboardwindow.cpp \
+    networkserver.cpp \
     security.cpp \
     signupwindow.cpp \
     user.cpp \
@@ -50,6 +52,7 @@ HEADERS += \
     loginwindow.h \
     mainwindow.h \
     morrisboardwindow.h \
+    networkserver.h \
     security.h \
     signupwindow.h \
     user.h \
