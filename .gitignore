@@ -29,6 +29,8 @@ x86/
 [Bb]in/
 [Oo]bj/
 *.vcxproj.user
+*.vcxproj
+*.vcxproj.filters
 *.suo
 *.user
 *.sln.docstates
