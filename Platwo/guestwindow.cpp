@@ -52,7 +52,7 @@ GuestWindow::GuestWindow(GameWindow::GameType game, QWidget *parent) : QWidget(p
     videoBackground->setVideo(":/images/images/1111.png ");
 
     initializeWindow();
-
+    client = new NetworkClient(this);
     selectedGuestColor = availableColors[0];
 
     connect(ui->colorComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this,[=](int index){
@@ -96,13 +96,13 @@ void GuestWindow::on_joinRoomButton_clicked() {
     ui->statusLabel->show();
     ui->statusLabel->setText("Connecting...");
     QString ip = ui->ipEdit->text();
-    int port = ui->portEdit->text().toInt();
-    Q_UNUSED(ip)
-    Q_UNUSED(port)
+    quint16 port = ui->portEdit->text().toUShort();
 
-    //اینجا واسه قسمت سرور و این هاستQTcpSocket
-
-    ui->statusLabel->setText("Connected successfully.");
+    if(!client->connectToServer(ip, port)) {
+        ui->statusLabel->setText("Connection failed.");
+        return;
+    }
+    ui->statusLabel->setText("Connecting...");
 
     /*
     اینجا بعدا صفحه و قسمت هر بازی باز میشه

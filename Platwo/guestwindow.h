@@ -5,6 +5,7 @@
 #include "videobackgroundwidget.h"
 #include <QColor>
 #include <QVector>
+#include "networkclient.h"
 namespace Ui {
 class GuestWindow;
 }
@@ -30,6 +31,9 @@ private:
     VideoBackgroundWidget *videoBackground;
     QVector<QColor> availableColors;
     QColor selectedGuestColor;
+
+    NetworkClient *client = nullptr;
+
 protected:
     void resizeEvent(QResizeEvent *event) override;
 };

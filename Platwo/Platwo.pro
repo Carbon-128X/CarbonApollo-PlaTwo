@@ -24,6 +24,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     morrisboardwindow.cpp \
+    networkclient.cpp \
     networkserver.cpp \
     security.cpp \
     signupwindow.cpp \
@@ -52,6 +53,7 @@ HEADERS += \
     loginwindow.h \
     mainwindow.h \
     morrisboardwindow.h \
+    networkclient.h \
     networkserver.h \
     security.h \
     signupwindow.h \
