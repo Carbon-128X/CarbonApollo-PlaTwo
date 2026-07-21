@@ -20,6 +20,7 @@ SOURCES += \
     guestwindow.cpp \
     hostwindow.cpp \
     logic/dotsAndBoxes.cpp \
+    logic/nineMensMorris.cpp \
     loginwindow.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -33,7 +34,7 @@ SOURCES += \
     videobackgroundwidget.cpp \
     welcomewindow.cpp \
     widget.cpp \
-
+    nineMensMorris.cpp \
 
 HEADERS += \
     boardwidget.h \
@@ -50,6 +51,7 @@ HEADERS += \
     logic/dotsAndBoxes.h \
     logic/gameMediator.h \
     logic/move.h \
+    logic/nineMensMorris.h \
     loginwindow.h \
     mainwindow.h \
     morrisboardwindow.h \
@@ -62,6 +64,7 @@ HEADERS += \
     videobackgroundwidget.h \
     welcomewindow.h \
     widget.h \
+    nineMensMorris.h \
 
 FORMS += \
     boxesboardwindow.ui \
