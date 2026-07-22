@@ -8,6 +8,7 @@
 #include <QIcon>
 #include "custommessagebox.h"
 #include "morrisboardwindow.h"
+
 HostWindow::HostWindow(GameWindow::GameType game, QWidget *parent): QWidget(parent),ui(new Ui::HostWindow),currentGame(game){
     ui->setupUi(this);
 

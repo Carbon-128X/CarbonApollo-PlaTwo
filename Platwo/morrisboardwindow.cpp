@@ -53,3 +53,45 @@ void MorrisBoardWindow::initializePlayers() {
     ui->player2ColorLabel->setStyleSheet( QString("color:%1;").arg(player2Color.name()));
 }
 
+void MorrisBoardWindow::initializeButtons() {
+    ui->saveButton->setCursor(Qt::PointingHandCursor);
+    ui->restartButton->setCursor(Qt::PointingHandCursor);
+    ui->exitButton->setCursor(Qt::PointingHandCursor);
+
+    if(timerEnabled){
+        startTurnTimer();
+    }
+}
+
+void MorrisBoardWindow::updateTurn(int player) {
+    ui->currentTurnLabel->setText( QString("Player %1").arg(player));
+}
+
+void MorrisBoardWindow::updateTimer(int seconds) {
+    int minute = seconds / 60;
+    int second = seconds % 60;
+    ui->timerLabel->setText(QString("%1:%2").arg(minute,2,10,QChar('0')).arg(second,2,10,QChar('0')));
+}
+
+void MorrisBoardWindow::startTurnTimer() {
+    if(!timerEnabled){
+        return;
+    }
+
+    turnTimer->stop();
+    remainingTime = turnTime;
+    updateTimer(remainingTime);
+    turnTimer->start(1000);
+}
+
+void MorrisBoardWindow::onTimerTick() {
+    remainingTime--;
+    updateTimer(remainingTime);
+    if(remainingTime <= 0) {
+        turnTimer->stop();
+        //game->forceNextPlayer();
+        updateTurn(game->currentPlayer());
+        startTurnTimer();
+        ui->boardWidget->update();
+    }
+}
