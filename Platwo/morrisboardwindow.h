@@ -15,7 +15,7 @@ class MorrisBoardWindow : public QWidget
 
 public:
     explicit MorrisBoardWindow( bool timer, int time, const QString &p1Name,
-    const QString &p2Name, const QColor &p1Color, const QColor &p2Color, QWidget *parent = nullptr );
+                               const QString &p2Name, const QColor &p1Color, const QColor &p2Color, QWidget *parent = nullptr );
     ~MorrisBoardWindow();
 
 private:
@@ -38,6 +38,9 @@ private:
     void updateTimer(int seconds);
     void startTurnTimer();
 
+private slots:
+    void onTimerTick();
+    void refreshGameUI();
 };
 
 #endif // MORRISBOARDWINDOW_H

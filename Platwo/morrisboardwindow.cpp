@@ -23,10 +23,33 @@ MorrisBoardWindow::MorrisBoardWindow( bool timer, int time, const QString &p1Nam
 
     connect(ui->boardWidget,&MorrisBoardWidget::boardChanged,this,&MorrisBoardWindow::refreshGameUI);
     ui->backgroundLabel->setPixmap( QPixmap(":/images/images/454545.png"));
-
+    initializeWindow();
 }
 
 MorrisBoardWindow::~MorrisBoardWindow() {
     delete game;
     delete ui;
 }
+void MorrisBoardWindow::initializeWindow() {
+    initializePlayers();
+    initializeButtons();
+    updateTurn(game->currentPlayer());
+
+    if(timerEnabled){
+        updateTimer(gameTime);
+    }
+    else{
+        ui->timerLabel->setText("--:--");
+    }
+}
+
+void MorrisBoardWindow::initializePlayers() {
+    ui->player1NameLabel->setText(player1Name.left(4));
+    ui->player2NameLabel->setText(player2Name.left(4));
+    ui->player1ColorLabel->setText("꧁                     ꧂");
+    ui->player2ColorLabel->setText("꧁                     ꧂");
+
+    ui->player1ColorLabel->setStyleSheet( QString("color:%1;").arg(player1Color.name()));
+    ui->player2ColorLabel->setStyleSheet( QString("color:%1;").arg(player2Color.name()));
+}
+
