@@ -47,4 +47,6 @@ public:
     // Rebuilding a game from a saved state
     void loadState(const vector<int>& board, int current, int toPlace1, int toPlace2,
         bool awaitingRemoval, int movesSinceRemoval);
+
+    void forceNextPlayer();
 };

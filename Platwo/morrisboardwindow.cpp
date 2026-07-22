@@ -1,6 +1,6 @@
 #include "morrisboardwindow.h"
 #include "ui_morrisboardwindow.h"
-
+#include "custommessagebox.h"
 MorrisBoardWindow::MorrisBoardWindow( bool timer, int time, const QString &p1Name, const QString &p2Name, const QColor &p1Color, const QColor &p2Color, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MorrisBoardWindow),
@@ -89,9 +89,28 @@ void MorrisBoardWindow::onTimerTick() {
     updateTimer(remainingTime);
     if(remainingTime <= 0) {
         turnTimer->stop();
-        //game->forceNextPlayer();
+        game->forceNextPlayer();
         updateTurn(game->currentPlayer());
         startTurnTimer();
         ui->boardWidget->update();
+    }
+}
+
+
+void MorrisBoardWindow::refreshGameUI() {
+    updateTurn(game->currentPlayer());
+    startTurnTimer();
+    ui->boardWidget->update();
+    if(game->isGameOver()) {
+        turnTimer->stop();
+        QString text;
+
+        if(game->winner()==0){
+            text="Draw!";
+        }
+        else{
+            text=QString("Winner : Player %1") .arg(game->winner());
+        }
+        CustomMessageBox::information( this,"Game Over", text);
     }
 }

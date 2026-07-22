@@ -316,3 +316,10 @@ void NineMensMorris::loadState(const vector<int>& board, int current, int toPlac
     awaitingRemoval_ = awaitingRemoval;
     movesSinceRemoval_ = movesSinceRemoval;
 }
+
+void NineMensMorris::forceNextPlayer() {
+    if(awaitingRemoval_){
+        return;
+    }
+    current_ = otherPlayer(current_);
+}
