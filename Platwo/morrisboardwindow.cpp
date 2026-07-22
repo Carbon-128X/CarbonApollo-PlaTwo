@@ -114,3 +114,24 @@ void MorrisBoardWindow::refreshGameUI() {
         CustomMessageBox::information( this,"Game Over", text);
     }
 }
+
+void MorrisBoardWindow::on_restartButton_clicked() {
+    turnTimer->stop();
+    delete game;
+
+    game = new NineMensMorris();
+    ui->boardWidget->setGame(game);
+    updateTurn(game->currentPlayer());
+    if(timerEnabled){
+        startTurnTimer();
+    }
+    ui->boardWidget->update();
+}
+
+void MorrisBoardWindow::on_exitButton_clicked() {
+    close();
+}
+
+void MorrisBoardWindow::on_saveButton_clicked() {
+    CustomMessageBox::information( this,"Save", "Save system will be implemented later.");
+}

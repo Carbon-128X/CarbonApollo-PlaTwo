@@ -41,6 +41,9 @@ private:
 private slots:
     void onTimerTick();
     void refreshGameUI();
+    void on_restartButton_clicked();
+    void on_exitButton_clicked();
+    void on_saveButton_clicked();
 };
 
 #endif // MORRISBOARDWINDOW_H
