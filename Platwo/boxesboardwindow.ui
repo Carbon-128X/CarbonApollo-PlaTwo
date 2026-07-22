@@ -622,7 +622,7 @@ border:none;</string>
   <customwidget>
    <class>BoardWidget</class>
    <extends>QWidget</extends>
-   <header location="global">boardwidget.h</header>
+   <header>boardwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

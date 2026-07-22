@@ -7,6 +7,7 @@
 #include <QPainter>
 #include <QIcon>
 #include "custommessagebox.h"
+#include "morrisboardwindow.h"
 HostWindow::HostWindow(GameWindow::GameType game, QWidget *parent): QWidget(parent),ui(new Ui::HostWindow),currentGame(game){
     ui->setupUi(this);
 
@@ -141,12 +142,19 @@ void HostWindow::on_createRoomButton_clicked() {
         gameTime = ui->timeEdit->text().toInt();
     }
     //-----------------------------------
-    /*
-    BoxesBoardWindow *board = new BoxesBoardWindow( boardSize, timerEnabled, gameTime, "HostUser","GuestUser", selectedHostColor,Qt::red );
-    board->show();
-    this->close();
-    */
 
+    if(currentGame == GameWindow::Boxes)
+    {
+        BoxesBoardWindow *board = new BoxesBoardWindow( boardSize, timerEnabled, gameTime, "HostUser", "GuestUser", selectedHostColor, Qt::red );
+        board->show();
+    }
+    else if(currentGame == GameWindow::Morris)
+    {
+        MorrisBoardWindow *board = new MorrisBoardWindow(timerEnabled, gameTime, "HostUser", "GuestUser", selectedHostColor, Qt::red );
+        board->show();
+    }
+
+    this->close();
 }
 
 void HostWindow::on_backButton_clicked() {

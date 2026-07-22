@@ -71,32 +71,6 @@ background:transparent;</string>
     <string>02:00</string>
    </property>
   </widget>
-  <widget class="BoardWidget" name="boardWidget" native="true">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>90</y>
-     <width>420</width>
-     <height>420</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>1200</width>
-     <height>700</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background: transparent;
-border:none;</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="currentTurnLabel">
    <property name="geometry">
     <rect>
@@ -583,19 +557,39 @@ background:#0284e8;
     </property>
    </widget>
   </widget>
+  <widget class="MorrisBoardWidget" name="boardWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>90</y>
+     <width>420</width>
+     <height>419</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>420</width>
+     <height>420</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;
+border:none;</string>
+   </property>
+  </widget>
   <zorder>backgroundLabel</zorder>
   <zorder>timerTitleLabel</zorder>
   <zorder>timerLabel</zorder>
   <zorder>currentTurnLabel</zorder>
   <zorder>currentTurnTitle</zorder>
-  <zorder>boardWidget</zorder>
   <zorder>infoWidget</zorder>
+  <zorder>boardWidget</zorder>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>BoardWidget</class>
+   <class>MorrisBoardWidget</class>
    <extends>QWidget</extends>
-   <header location="global">boardwidget.h</header>
+   <header>morrisboardwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

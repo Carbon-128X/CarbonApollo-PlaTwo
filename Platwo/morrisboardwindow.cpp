@@ -1,14 +1,32 @@
 #include "morrisboardwindow.h"
 #include "ui_morrisboardwindow.h"
 
-MorrisBoardWindow::MorrisBoardWindow(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::MorrisBoardWindow)
-{
+MorrisBoardWindow::MorrisBoardWindow( bool timer, int time, const QString &p1Name, const QString &p2Name, const QColor &p1Color, const QColor &p2Color, QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::MorrisBoardWindow),
+    timerEnabled(timer),
+    gameTime(time),
+    player1Name(p1Name),
+    player2Name(p2Name),
+    player1Color(p1Color),
+    player2Color(p2Color) {
     ui->setupUi(this);
+
+    turnTime = gameTime;
+    remainingTime = turnTime;
+
+    turnTimer = new QTimer(this);
+    connect( turnTimer, &QTimer::timeout, this, &MorrisBoardWindow::onTimerTick );
+
+    game = new NineMensMorris();
+    ui->boardWidget->setGame(game);
+
+    connect(ui->boardWidget,&MorrisBoardWidget::boardChanged,this,&MorrisBoardWindow::refreshGameUI);
+    ui->backgroundLabel->setPixmap( QPixmap(":/images/images/454545.png"));
+
 }
 
-MorrisBoardWindow::~MorrisBoardWindow()
-{
+MorrisBoardWindow::~MorrisBoardWindow() {
+    delete game;
     delete ui;
 }
