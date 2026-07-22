@@ -20,9 +20,9 @@ public:
 
     // Each one returns the messages that must be sent to the other side.
     vector<string> makeLocalMove(const Move& move);
-    vector<string> handleMessage(const string& line); // receiving a line from the other side
+    void handleMessage(const string& line);      // receiving a line from the other side
     vector<string> sendChat(const string& text);
-    vector<string> giveupLocal();                     // gave up or timer ran out
+    vector<string> giveupLocal();      // gave up or time over
 
     // -------------------- read access for UI --------------------
     const GameMediator* game() const;

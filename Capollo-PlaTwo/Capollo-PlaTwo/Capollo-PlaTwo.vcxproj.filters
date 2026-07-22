@@ -33,12 +33,21 @@
     <ClInclude Include="..\..\network\protocol.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\network\gameSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\logic\dotsAndBoxes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\logic\nineMensMorris.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\network\protocol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\network\gameSession.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

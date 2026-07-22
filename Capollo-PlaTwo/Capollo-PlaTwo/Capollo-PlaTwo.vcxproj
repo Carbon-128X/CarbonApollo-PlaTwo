@@ -144,11 +144,14 @@
     <ClInclude Include="..\..\logic\move.h" />
     <ClInclude Include="..\..\logic\gameMediator.h" />
     <ClInclude Include="..\..\logic\nineMensMorris.h" />
+    <ClInclude Include="..\..\network\gameSession.h" />
     <ClInclude Include="..\..\network\protocol.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\logic\dotsAndBoxes.cpp" />
     <ClCompile Include="..\..\logic\nineMensMorris.cpp" />
+    <ClCompile Include="..\..\network\gameSession.cpp" />
+    <ClCompile Include="..\..\network\protocol.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\.gitignore" />
